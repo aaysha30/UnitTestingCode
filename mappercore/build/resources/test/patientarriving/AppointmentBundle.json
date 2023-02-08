@@ -1,0 +1,413 @@
+{
+  "resourceType": "Bundle",
+  "id": "064be16f-b15f-4900-a761-dbf133e45cea",
+  "meta": {
+    "lastUpdated": "2021-02-10T12:42:33.923+05:30"
+  },
+  "type": "searchset",
+  "total": 2,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://ariav16dc:44370/fhir/Appointment?_format=json&_include=Appointment%3Aactor"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://ariav16dc:44370/fhir/Appointment/Appointment-17",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "Appointment-1",
+        "meta": {
+          "versionId": "576315",
+          "lastUpdated": "2021-02-08T16:11:09.697+05:30",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Appointment"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/appointment-ariaStatus",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/aria-appointment-status",
+                  "code": "Open",
+                  "display": "Open"
+                }
+              ]
+            }
+          }
+        ],
+        "modifierExtension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/readOnly",
+            "valueBoolean": false
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "17"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/UID",
+            "value": "FHIR_73e01269-28d5-4dc5-a0c8-11ed876775fe"
+          }
+        ],
+        "status": "booked",
+        "serviceCategory": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/CodeSystem/activityDefinition-category",
+                "code": "Special Review Activities",
+                "display": "Special Review Activities"
+              }
+            ]
+          }
+        ],
+        "serviceType": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/ValueSet/Appointment/service-type",
+                "code": "Approve Physician Order Task",
+                "display": "Approve Physician Order Task"
+              }
+            ]
+          }
+        ],
+        "priority": 2,
+        "start": "2019-02-25T22:15:00.000+05:30",
+        "end": "2019-02-25T22:45:00.000+05:30",
+        "minutesDuration": 30,
+        "created": "2021-02-08T16:11:09+05:30",
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "HealthcareService"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "HealthcareService/HealthcareService-1",
+              "display": "TEST_ID1"
+            },
+            "status": "accepted"
+          },
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Patient"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Patient/Patient-420",
+              "display": "Automation2021020816105465, Test"
+            },
+            "status": "accepted"
+          },
+          {
+            "id": "22",
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Practitioner"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Practitioner/Practitioner-1002",
+              "display": "varian"
+            },
+            "status": "accepted"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://ariav16dc:44370/fhir/Appointment/Appointment-32",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "Appointment-2",
+        "meta": {
+          "versionId": "579439",
+          "lastUpdated": "2021-02-09T11:29:57.790+05:30",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Appointment"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/appointment-ariaStatus",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/aria-appointment-status",
+                  "code": "Open",
+                  "display": "Open"
+                }
+              ]
+            }
+          }
+        ],
+        "modifierExtension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/readOnly",
+            "valueBoolean": false
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "32"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/UID",
+            "value": "FHIR_998df85a-9224-438a-9541-bc358238ef23"
+          }
+        ],
+        "status": "booked",
+        "serviceCategory": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/CodeSystem/activityDefinition-category",
+                "code": "Special Review Activities",
+                "display": "Special Review Activities"
+              }
+            ]
+          }
+        ],
+        "serviceType": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/ValueSet/Appointment/service-type",
+                "code": "Approve Physician Order Task",
+                "display": "Approve Physician Order Task"
+              }
+            ]
+          }
+        ],
+        "priority": 2,
+        "start": "2019-02-25T22:15:00.000+05:30",
+        "end": "2019-02-25T22:45:00.000+05:30",
+        "minutesDuration": 30,
+        "created": "2021-02-09T11:29:57+05:30",
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "HealthcareService"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "HealthcareService/HealthcareService-1",
+              "display": "TEST_ID1"
+            },
+            "status": "accepted"
+          },
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Patient"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Patient/Patient-428",
+              "display": "Automation2021020911295485, Test"
+            },
+            "status": "accepted"
+          },
+          {
+            "id": "37",
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Practitioner"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Practitioner/Practitioner-1002",
+              "display": "varian"
+            },
+            "status": "accepted"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://ariav16dc:44370/fhir/Appointment/Appointment-65",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "Appointment-3",
+        "meta": {
+          "versionId": "579439",
+          "lastUpdated": "2021-02-09T11:29:57.790+05:30",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Appointment"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/appointment-ariaStatus",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/aria-appointment-status",
+                  "code": "Open",
+                  "display": "Open"
+                }
+              ]
+            }
+          }
+        ],
+        "modifierExtension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/readOnly",
+            "valueBoolean": false
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "32"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/UID",
+            "value": "FHIR_998df85a-9224-438a-9541-bc358238ef23"
+          }
+        ],
+        "status": "booked",
+        "serviceCategory": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/CodeSystem/activityDefinition-category",
+                "code": "Special Review Activities",
+                "display": "Special Review Activities"
+              }
+            ]
+          }
+        ],
+        "serviceType": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/ValueSet/Appointment/service-type",
+                "code": "Approve Physician Order Task",
+                "display": "Approve Physician Order Task"
+              }
+            ]
+          }
+        ],
+        "priority": 2,
+        "start": "2019-02-25T22:15:00.000+05:30",
+        "end": "2019-02-25T22:45:00.000+05:30",
+        "minutesDuration": 30,
+        "created": "2021-02-09T11:29:57+05:30",
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "HealthcareService"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "HealthcareService/HealthcareService-1",
+              "display": "TEST_ID1"
+            },
+            "status": "accepted"
+          },
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Patient"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Patient/Patient-428",
+              "display": "Automation2021020911295485, Test"
+            },
+            "status": "accepted"
+          },
+          {
+            "id": "37",
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Practitioner"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Practitioner/Practitioner-1002",
+              "display": "varian"
+            },
+            "status": "accepted"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "resourceType": "Bundle",
+  "id": "614baafe-9b2a-4aa5-96f7-01f7419b025f",
+  "meta": {
+    "lastUpdated": "2022-07-07T11:56:26.452+05:30"
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://fhirconnectvm1:44370/4.2/fhir/InsurancePlan?name%3Aexact=Test%20Group%20Plan"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://fhirconnectvm1:44370/4.2/fhir/InsurancePlan/InsurancePlan-1",
+      "resource": {
+        "resourceType": "InsurancePlan",
+        "id": "InsurancePlan-1",
+        "meta": {
+          "versionId": "478326",
+          "lastUpdated": "2022-07-07T11:52:48.200+05:30",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/InsurancePlan"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/InsurancePlan/Id",
+            "value": "1"
+          }
+        ],
+        "status": "active",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/CodeSystem/aria-payor-planType",
+                "code": "CAP",
+                "display": "Capitated Contract"
+              }
+            ]
+          }
+        ],
+        "name": "Test Group Plan",
+        "period": {
+          "start": "2022-02-23T12:00:00+05:30",
+          "end": "2022-07-06T12:00:00+05:30"
+        },
+        "contact": [
+          {
+            "purpose": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type",
+                  "code": "PAYOR",
+                  "display": "Payor"
+                }
+              ]
+            },
+            "name": {
+              "text": "LIC CORP"
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "1111",
+                "use": "work"
+              },
+              {
+                "system": "email",
+                "value": "lic_corp@corp.in",
+                "use": "work"
+              },
+              {
+                "system": "fax",
+                "value": "333333",
+                "use": "work"
+              }
+            ],
+            "address": {
+              "type": "both",
+              "line": [
+                "D902",
+                "Level 2 Tower 4"
+              ],
+              "city": "PUNE",
+              "state": "MH",
+              "postalCode": "411014",
+              "country": "IND"
+            }
+          }
+        ],
+        "plan": [
+          {
+            "generalCost": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/aria-payor-planCostType",
+                      "code": "costPerDiagnosis",
+                      "display": "Cost Per Diagnosis"
+                    }
+                  ]
+                },
+                "groupSize": 10,
+                "cost": {
+                  "value": 1000.0000
+                }
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/aria-payor-planCostType",
+                      "code": "monthlyCostPerMember",
+                      "display": "Monthly Payment Per Member"
+                    }
+                  ]
+                },
+                "groupSize": 10,
+                "cost": {
+                  "value": 50000.0000
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}

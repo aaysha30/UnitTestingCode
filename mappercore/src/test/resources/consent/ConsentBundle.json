@@ -1,0 +1,52 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Parameters",
+        "parameter": [
+          {
+            "name": "DenySnapshotOnDirectiveComment",
+            "valueString": "1"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Consent",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Consent"
+          ]
+        },
+        "status": "active",
+        "scope": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+              "code": "adr",
+              "display": "Advanced Care Directive"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/CodeSystem/aria-consent-patientDirectiveType",
+                "display": "Directive1"
+              }
+            ]
+          }
+        ],
+        "patient": {
+          "type": "Patient"
+        },
+        "policyRule": {
+          "text": "comments"
+        }
+      }
+    }
+  ]
+}

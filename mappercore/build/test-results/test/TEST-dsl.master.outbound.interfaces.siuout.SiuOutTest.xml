@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dsl.master.outbound.interfaces.siuout.SiuOutTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-08T06:47:25" hostname="IN01-7MW2TQ3" time="22.903">
+  <properties/>
+  <testcase name="test" classname="dsl.master.outbound.interfaces.siuout.SiuOutTest" time="22.903"/>
+  <system-out><![CDATA[file:/C:/CodeMaperGit/VarianConnect/mappercore/dsl/master/outbound/interfaces/siuout/AppointmentHelper.groovy : 2027
+file:/C:/CodeMaperGit/VarianConnect/mappercore/dsl/master/outbound/interfaces/siuout/SIU_Out.groovy : 248
+file:/C:/CodeMaperGit/VarianConnect/mappercore/dsl/master/outbound/interfaces/siuout/siu_out_fhir.groovy : 149
+file:/C:/CodeMaperGit/VarianConnect/mappercore/dsl/master/outbound/interfaces/siuout/StringGroovy.groovy : 68
+file:/C:/CodeMaperGit/VarianConnect/mappercore/dsl/master/outbound/common/getresource.groovy : 70
+file:/C:/CodeMaperGit/VarianConnect/mappercore/dsl/master/outbound/helper/parsedate.groovy : 68
+2023-01-09T00-04-46-901-1847692@958500816058
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+</testsuite>

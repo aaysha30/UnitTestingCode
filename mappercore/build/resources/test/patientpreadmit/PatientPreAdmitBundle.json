@@ -1,0 +1,224 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Parameters",
+        "parameter": [
+          {
+            "name": "Source",
+            "valueString": "Hl7"
+          },
+          {
+            "name": "Subject",
+            "valueString": "PatientPreadmit"
+          },
+          {
+            "name": "Event",
+            "valueString": "ADT^A05"
+          },
+          {
+            "name": "SuppressUpdateOnPrimaryCheck",
+            "valueString": "0"
+          },
+          {
+            "name": "SnapshotAllergy",
+            "valueBoolean": false
+          },
+          {
+            "name": "PrimaryCoverage",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotCoverage",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotCondition",
+            "valueBoolean": false
+          },
+          {
+            "name": "CurrentDatetime",
+            "valueString": "2021-03-17T16:07:01"
+          },
+          {
+            "name": "DefaultHospitalName"
+          },
+          {
+            "name": "DefaultDepartmentId"
+          },
+          {
+            "name": "DefaultRoomNumber",
+            "valueString": "Unknown"
+          },
+          {
+            "name": "AutoCreateEvents",
+            "valueString": "ADT^A01,ADT^A02,ADT^A03,ADT^A04,ADT^A05,ADT^A06,ADT^A07,ADT^A08,ADT^A14,ADT^A15,ADT^A22,ADT^A28,ADT^A31"
+          },
+          {
+            "name": "AdvPatientClassProcess",
+            "valueString": "0"
+          },
+          {
+            "name": "PatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name": "MergePatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name": "AutoCreateReferringPhysician",
+            "valueString": "1"
+          },
+          {
+            "name": "DenySnapshotOnDirectiveComment"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MessageHeader",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/MessageHeader"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/receivingApplication",
+            "valueString": "7edit.com"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/receivingFacility"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/messageControlId",
+            "valueString": "MSG-20210317-124749-0464"
+          }
+        ],
+        "source": {
+          "name": "7edit.com"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Patient"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "MothersMaidenName"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-class",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "In Patient"
+                }
+              ]
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#roomNumber",
+                "valueString": "1235"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#admissionDate",
+                "valueDate": "2015-07-02"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#dischargeDate",
+                "valueDate": "2015-07-05"
+              }
+            ],
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-location#venue",
+            "valueIdentifier": {
+              "system": "http://varian.com/fhir/identifier/Location/Id",
+              "value": "PoC"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/recordedOn",
+            "valueDateTime": "2021-03-17T16:07:01"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/ARIAID1",
+            "value": "Test050102"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "JONES9",
+            "given": [
+              "WILLIAM9",
+              "D"
+            ],
+            "suffix": [
+              "IV"
+            ]
+          }
+        ],
+        "managingOrganization": {
+          "display": "ACHospital"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CareTeam",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/CareTeam"
+          ]
+        },
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "default-service-organization"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "display": "OIS_ID1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Flag",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Flag"
+          ]
+        },
+        "code": {
+        },
+        "subject": {
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "resourceType": "ValueSet",
+  "id": "aria-allergy-category",
+  "meta": {
+    "profile": [
+      "http://varian.com/fhir/v1/StructureDefinition/ValueSet"
+    ]
+  },
+  "url": "http://varian.com/fhir/ValueSet/allergy-intolerance-category",
+  "version": "1.0",
+  "name": "aria-allergy-category",
+  "status": "active",
+  "description": "This value set defines different allergy types configured in aria.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://varian.com/fhir/CodeSystem/AllergyIntolerance/allergy-category"
+      }
+    ]
+  },
+  "expansion": {
+    "contains": [
+      {
+        "contains": [
+          {
+            "system": "http://varian.com/fhir/CodeSystem/AllergyIntolerance/allergy-category",
+            "code": "1",
+            "display": "Drug"
+          },
+          {
+            "system": "http://varian.com/fhir/CodeSystem/AllergyIntolerance/allergy-category",
+            "code": "2",
+            "display": "Drug Class"
+          },
+          {
+            "system": "http://varian.com/fhir/CodeSystem/AllergyIntolerance/allergy-category",
+            "code": "3",
+            "display": "Food"
+          },
+          {
+            "system": "http://varian.com/fhir/CodeSystem/AllergyIntolerance/allergy-category",
+            "code": "4",
+            "display": "Other"
+          },
+          {
+            "system": "http://varian.com/fhir/CodeSystem/AllergyIntolerance/allergy-category",
+            "code": "6",
+            "display": "Unknown"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,4242 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Parameters",
+        "parameter": [
+          {
+            "name": "ID",
+            "valueString": "99635"
+          },
+          {
+            "name": "patient_ser",
+            "valueString": "944203"
+          },
+          {
+            "name": "Source",
+            "valueString": "Json"
+          },
+          {
+            "name": "Subject",
+            "valueString": "SiuOutFhir"
+          },
+          {
+            "name": "scheduledactivityser",
+            "valueString": "1847692"
+          },
+          {
+            "name": "event_reason",
+            "valueString": "Varian.ARIA.Appointment.StatusChange"
+          },
+          {
+            "name": "department_ser",
+            "valueString": "10011"
+          },
+          {
+            "name": "scheduled_activity_rev_count",
+            "valueString": "7"
+          },
+          {
+            "name": "history_username",
+            "valueString": "dev\\acuser"
+          },
+          {
+            "name": "patient_id",
+            "valueString": "pid211222011034_fhir"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "Appointment-1847692",
+        "meta": {
+          "versionId": "7",
+          "lastUpdated": "2023-01-11T00:52:38.687-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Appointment"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/reminderTime",
+            "valueQuantity": {
+              "value": 1440,
+              "unit": "Minutes"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/appointment-ariaStatus",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/aria-appointment-status",
+                  "code": "Open",
+                  "display": "Open"
+                }
+              ]
+            }
+          }
+        ],
+        "modifierExtension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/readOnly",
+            "valueBoolean": false
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "1847692"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/UID",
+            "value": "2023-01-09T00-04-46-901-1847692@958500816058"
+          }
+        ],
+        "status": "booked",
+        "serviceCategory": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/CodeSystem/activityDefinition-category",
+                "code": "Treatment Tasks",
+                "display": "Treatment Tasks"
+              }
+            ]
+          }
+        ],
+        "serviceType": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/ValueSet/Appointment/service-type",
+                "code": "Blood Test",
+                "display": "Blood Test"
+              }
+            ]
+          }
+        ],
+        "priority": 2,
+        "description": "new desc",
+        "start": "2023-01-09T00:03:00.000-08:00",
+        "end": "2023-01-09T00:18:00.000-08:00",
+        "minutesDuration": 15,
+        "created": "2023-01-09T00:04:46-08:00",
+        "comment": "Appointent note",
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/ActivityInstance-14649892"
+          }
+        ],
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "HealthcareService"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "HealthcareService/HealthcareService-10011",
+              "display": "OIS_ID1"
+            },
+            "status": "accepted"
+          },
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Patient"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Patient/Patient-944203",
+              "display": "JONES9, WILLIAM9"
+            },
+            "status": "accepted"
+          },
+          {
+            "id": "2345585",
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Location"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Location/Location-1217",
+              "display": "SMH NucletronHDR"
+            },
+            "status": "accepted"
+          },
+          {
+            "id": "2345584",
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Location"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Location/Location-2796",
+              "display": "Head and Neck Holder"
+            },
+            "status": "accepted"
+          },
+          {
+            "id": "2345579",
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Practitioner"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Practitioner/Practitioner-5333",
+              "display": "Onco1"
+            },
+            "status": "accepted"
+          },
+          {
+            "id": "2345578",
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Practitioner"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Practitioner/Practitioner-5328",
+              "display": "ARIA_CONNECT_VAIS_CLIENT"
+            },
+            "status": "accepted"
+          },
+          {
+            "id": "2345583",
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Device"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Device/Device-432",
+              "display": "LBRTY"
+            },
+            "status": "accepted"
+          },
+          {
+            "id": "2345582",
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Device"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Device/Device-390",
+              "display": "37eniwiq"
+            },
+            "status": "accepted"
+          },
+          {
+            "id": "2345581",
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Location"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Location/Location-22",
+              "display": "Venue22"
+            },
+            "status": "accepted"
+          },
+          {
+            "id": "2345580",
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PART",
+                    "display": "Location"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Location/Location-4365",
+              "display": "Venue1"
+            },
+            "status": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/Practitioner/Practitioner-4362",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner-4362",
+        "meta": {
+          "versionId": "522194032",
+          "lastUpdated": "2022-08-09T11:12:45.230-07:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Practitioner"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-1",
+              "display": "Zeukeoyor"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-3",
+              "display": "Hw. Aaliavev"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-4",
+              "display": "Raree"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-6",
+              "display": "RO Fuhmja"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-7",
+              "display": "Haktabakd"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-8",
+              "display": "Ijalrdiae"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-9",
+              "display": "Tc. Ecaip"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-11",
+              "display": "Jceaxfgeziav"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-12",
+              "display": "Qdadzewwk"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-14",
+              "display": "Kawwew"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-15",
+              "display": "Peadev"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-16",
+              "display": "Oooe"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-17",
+              "display": "Foliyol"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10002",
+              "display": "Laaeuoj"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10004",
+              "display": "Otio Fatues Ueeipak Nedxed"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10005",
+              "display": "Bakximzsoy"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10007",
+              "display": "Eqimkceab"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10011",
+              "display": "OIS_ID1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/defaultServiceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10005",
+              "display": "Bakximzsoy"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/practitioner-role",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/practitioner-role",
+                  "code": "oncologist",
+                  "display": "Oncologist"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://varian.com/fhir/identifier/Practitioner/Id",
+            "value": "ACUser"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Practitioner/Stakeholder-Id",
+            "value": "571"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Practitioner/UserName",
+            "value": "dev\\acuser"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "4362"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Practitioner/user-cuid",
+            "value": "bf84807a-db53-4b5a-a19c-fb8c7ca39c37"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "ACUser"
+            ]
+          },
+          {
+            "use": "official",
+            "family": "User",
+            "given": [
+              "AC"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "id": "177049",
+            "use": "work",
+            "type": "both"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/qualification",
+                  "code": "Allergy",
+                  "display": "Allergy"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization-Dept-10011",
+        "meta": {
+          "versionId": "508567180",
+          "lastUpdated": "2021-01-11T09:58:54.533-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Organization"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/isChargeCaptureApplicable",
+            "valueBoolean": true
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Organization/dept/Id",
+            "value": "OIS_ID1"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "10011"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "dept",
+                "display": "Hospital Department"
+              }
+            ]
+          }
+        ],
+        "name": "OIS_ID1",
+        "partOf": {
+          "reference": "Organization/Organization-Prov-3",
+          "display": "ACHospital"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/ActivityDefinition/ActivityDefinition-4577",
+      "resource": {
+        "resourceType": "ActivityDefinition",
+        "id": "ActivityDefinition-4577",
+        "meta": {
+          "versionId": "508570149",
+          "lastUpdated": "2021-01-11T09:59:09.580-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/ActivityDefinition"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/activityDefinition-category",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/activityDefinition-category",
+                  "code": "Treatment Tasks",
+                  "display": "Treatment Tasks"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/isChargeCaptureApplicable",
+            "valueBoolean": true
+          }
+        ],
+        "version": "1",
+        "name": "Blood Test",
+        "status": "active",
+        "date": "2021-01-11T09:59:09-08:00",
+        "description": "new desc",
+        "useContext": [
+          {
+            "code": {
+              "system": "http://varian.com/fhir/CodeSystem/activityDefinition-usage-context-type",
+              "code": "service-organization",
+              "display": "service-organization"
+            },
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10011",
+              "display": "OIS_ID1"
+            }
+          }
+        ],
+        "kind": "Task",
+        "timingDuration": {
+          "value": 15,
+          "unit": "min",
+          "system": "http://unitsofmeasure.org",
+          "code": "15"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/Patient/Patient-944203",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-944203",
+        "meta": {
+          "versionId": "535417882",
+          "lastUpdated": "2023-01-10T20:59:58.507-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Patient"
+          ],
+          "tag": [
+            {
+              "code": "DirectiveStatus",
+              "display": "Present"
+            },
+            {
+              "code": "AllergyStatus",
+              "display": "Present"
+            },
+            {
+              "code": "InfectionStatus",
+              "display": "Not Present"
+            }
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "MothersMaidenName"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "American Indian or Alaska Native"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Other"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-citizenship",
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-citizenship",
+                      "code": "IND",
+                      "display": "India"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Nashik",
+              "country": "AFG"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-religion",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/patient-religion",
+                  "code": "Protestant",
+                  "display": "Protestant"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-status",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/patient-status",
+                  "code": "Previous Patient (NOP)"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-class",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/patient-class",
+                  "code": "In Patient"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#roomNumber",
+                "valueString": "1235"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#admissionDate",
+                "valueDate": "2015-07-02"
+              }
+            ]
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-deathReason",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/patient-deathReason",
+                  "code": "Accident",
+                  "display": "Accident"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-customAttributes",
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesCode",
+                      "code": "UserDefAttrib01",
+                      "display": "Department ID"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesValue",
+                      "code": "UserAttribute01",
+                      "display": "UserAttribute01"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-customAttributes",
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesCode",
+                      "code": "UserDefAttrib02",
+                      "display": "SNF"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesValue",
+                      "code": "UserAttribute02",
+                      "display": "UserAttribute02"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-customAttributes",
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesCode",
+                      "code": "UserDefAttrib03",
+                      "display": "ResearchRegistry"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesValue",
+                      "code": "UserAttribute03",
+                      "display": "UserAttribute03"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-customAttributes",
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesCode",
+                      "code": "UserDefAttrib04",
+                      "display": "EPIC Name"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesValue",
+                      "code": "UserAttribute04",
+                      "display": "UserAttribute04"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/recordedOn",
+            "valueDateTime": "2023-01-05T23:46:49-08:00"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/person-gender",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/person-gender",
+                  "code": "Other",
+                  "display": "Other"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-clinicalTrial",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-carePlan",
+            "valueReference": {
+              "reference": "CarePlan/CarePlan-380032",
+              "display": "Added Activities"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-autopsyDetails",
+            "extension": [
+              {
+                "url": "status",
+                "valueCodeableConcept": {
+                  "text": "Y"
+                }
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://varian.com/fhir/identifier/Patient/ARIAID1",
+            "value": "pid211222011034_fhir"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/MedOnc-Id",
+            "value": "07350000000000585370"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/RadOnc-Id",
+            "value": "944203"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/patient-uid",
+            "value": "1.2.246.352.76.12.958500816058.944203.2300582909227"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/UID",
+            "value": "UniversalId"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "JONES9",
+            "given": [
+              "WILLIAM9",
+              "D"
+            ],
+            "suffix": [
+              "IV"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(020)020020020",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "(0253)2390390",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "9595959959",
+            "use": "mobile"
+          },
+          {
+            "system": "email",
+            "value": "aa@aa.com",
+            "use": "home"
+          },
+          {
+            "system": "fax",
+            "value": "55555",
+            "use": "home"
+          },
+          {
+            "system": "pager",
+            "value": "88888",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "(0253)2380380",
+            "use": "temp"
+          }
+        ],
+        "gender": "other",
+        "birthDate": "2000-01-01",
+        "address": [
+          {
+            "id": "2555997",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": true
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/address-telephone1",
+                "valueString": "(0253)2390390"
+              }
+            ],
+            "use": "home",
+            "type": "both",
+            "line": [
+              "120 PAWAR NAGAR N ELM STREET",
+              "Thergaon1"
+            ],
+            "city": "GREENSBORO",
+            "district": "IND",
+            "state": "NC",
+            "postalCode": "27401-1020",
+            "country": "IND"
+          },
+          {
+            "id": "2555998",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": true
+              }
+            ],
+            "use": "temp",
+            "type": "both",
+            "line": [
+              "1202 PAWAR NAGAR N ELM STREET",
+              "Thergaon2"
+            ],
+            "city": "GREENSBORO",
+            "district": "IND",
+            "state": "NC",
+            "postalCode": "27401-1020",
+            "country": "IND"
+          },
+          {
+            "id": "2555999",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": false
+              }
+            ],
+            "use": "temp",
+            "type": "both",
+            "line": [
+              "1203 PAWAR NAGAR N ELM STREET",
+              "Thergaon3"
+            ],
+            "city": "GREENSBORO",
+            "district": "IND",
+            "state": "NC",
+            "postalCode": "27401-1020",
+            "country": "IND"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/ValueSet/marital-status",
+              "code": "M",
+              "display": "Married"
+            },
+            {
+              "system": "http://varian.com/fhir/CodeSystem/patient-marital-status",
+              "code": "MARRIED",
+              "display": "Married"
+            }
+          ]
+        },
+        "contact": [
+          {
+            "id": "359924",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-subrelation",
+                "valueString": "Father"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-isPrimary",
+                "valueBoolean": false
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationTaskName",
+                "valueString": "3c66df24a5b84537ae134b4ad64d612c"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationUser",
+                "valueReference": {
+                  "reference": "Practitioner/Practitioner-5336",
+                  "display": "FHIRHeadLessClient_CI"
+                }
+              }
+            ],
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "C",
+                    "display": "Emergency Contact"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "official",
+              "family": "Contact1",
+              "given": [
+                "One"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "(020)020020020",
+                "use": "work"
+              },
+              {
+                "system": "phone",
+                "value": "(0253)2390390",
+                "use": "home"
+              },
+              {
+                "system": "phone",
+                "value": "9595959959",
+                "use": "mobile"
+              },
+              {
+                "system": "email",
+                "value": "aa@aa.com",
+                "use": "home"
+              },
+              {
+                "system": "fax",
+                "value": "55555",
+                "use": "home"
+              },
+              {
+                "system": "phone",
+                "value": "(0253)2380380",
+                "use": "temp"
+              }
+            ],
+            "address": {
+              "id": "2562606",
+              "use": "home",
+              "type": "both",
+              "line": [
+                "123 PAWAR NAGAR Update Street",
+                "Thergaon"
+              ],
+              "city": "Palo Alto",
+              "state": "CA",
+              "postalCode": "90878",
+              "country": "IND"
+            }
+          },
+          {
+            "id": "359925",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-subrelation",
+                "valueString": "Mother"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-isPrimary",
+                "valueBoolean": true
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationTaskName",
+                "valueString": "3c66df24a5b84537ae134b4ad64d612c"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationUser",
+                "valueReference": {
+                  "reference": "Practitioner/Practitioner-5336",
+                  "display": "FHIRHeadLessClient_CI"
+                }
+              }
+            ],
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "C",
+                    "display": "Emergency Contact"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "official",
+              "family": "Contact2",
+              "given": [
+                "One"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "(020)020020020",
+                "use": "work"
+              },
+              {
+                "system": "phone",
+                "value": "(0253)2390390",
+                "use": "home"
+              },
+              {
+                "system": "phone",
+                "value": "9595959959",
+                "use": "mobile"
+              },
+              {
+                "system": "email",
+                "value": "aa@aa.com",
+                "use": "home"
+              },
+              {
+                "system": "fax",
+                "value": "55555",
+                "use": "home"
+              },
+              {
+                "system": "phone",
+                "value": "(0253)2380380",
+                "use": "temp"
+              }
+            ],
+            "address": {
+              "id": "2562607",
+              "use": "home",
+              "type": "both",
+              "line": [
+                "123 PAWAR NAGAR2 Update Street2",
+                "Thergaon"
+              ],
+              "city": "Palo Alto",
+              "state": "CA",
+              "postalCode": "90878",
+              "country": "IND"
+            }
+          },
+          {
+            "id": "302049",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-subrelation",
+                "valueString": "Employer"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-isPrimary",
+                "valueBoolean": false
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationTaskName",
+                "valueString": "3c66df24a5b84537ae134b4ad64d612c"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationUser",
+                "valueReference": {
+                  "reference": "Practitioner/Practitioner-5336",
+                  "display": "FHIRHeadLessClient_CI"
+                }
+              }
+            ],
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "E",
+                    "display": "Employer"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "official",
+              "given": [
+                "Employer1 Name"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "(020)020020020",
+                "use": "work"
+              }
+            ],
+            "address": {
+              "id": "2562608",
+              "use": "work",
+              "type": "both",
+              "line": [
+                "123 Employer NAGAR Employer Street",
+                "Thergaon"
+              ],
+              "city": "Palo Alto",
+              "state": "CA",
+              "postalCode": "90878",
+              "country": "IND"
+            }
+          },
+          {
+            "id": "302050",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-subrelation",
+                "valueString": "Employer"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-isPrimary",
+                "valueBoolean": true
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationTaskName",
+                "valueString": "3c66df24a5b84537ae134b4ad64d612c"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationUser",
+                "valueReference": {
+                  "reference": "Practitioner/Practitioner-5336",
+                  "display": "FHIRHeadLessClient_CI"
+                }
+              }
+            ],
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "E",
+                    "display": "Employer"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "official",
+              "given": [
+                "Employer2 Name"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "(020)020020020",
+                "use": "work"
+              }
+            ],
+            "address": {
+              "id": "2562609",
+              "use": "work",
+              "type": "both",
+              "line": [
+                "Employer NAGAR2 Employer Street2",
+                "Thergaon"
+              ],
+              "city": "Palo Alto",
+              "state": "CA",
+              "postalCode": "90878"
+            }
+          },
+          {
+            "id": "147777",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-isPrimary",
+                "valueBoolean": true
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-modeOfArrival",
+                "valueCodeableConcept": {
+                  "text": "Ambulance"
+                }
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationTaskName",
+                "valueString": "3c66df24a5b84537ae134b4ad64d612c"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationUser",
+                "valueReference": {
+                  "reference": "Practitioner/Practitioner-5336",
+                  "display": "FHIRHeadLessClient_CI"
+                }
+              }
+            ],
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "O",
+                    "display": "Other"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "official",
+              "given": [
+                "Ambulance"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "02532333",
+                "use": "work"
+              }
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/communication-language",
+                  "code": "Polish",
+                  "display": "Polish"
+                }
+              ]
+            }
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/Organization-Prov-5",
+          "display": "ACCHospital"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/CareTeam/CareTeam-944203",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "CareTeam-944203",
+        "meta": {
+          "versionId": "44935",
+          "lastUpdated": "2023-01-10T20:59:58.660-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/CareTeam"
+          ]
+        },
+        "status": "active",
+        "subject": {
+          "reference": "Patient/Patient-944203",
+          "display": "JONES9, WILLIAM9"
+        },
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "https://ncit.nci.nih.gov",
+                    "code": "C16666",
+                    "display": "Healthcare Provider"
+                  },
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "service-organization",
+                    "display": "Service Organization"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Organization/Organization-Dept-10013",
+              "display": "Cardiovascular"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "https://ncit.nci.nih.gov",
+                    "code": "C93060",
+                    "display": "Primary Health Care Provider"
+                  },
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "default-service-organization",
+                    "display": "Default Service Organization"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Organization/Organization-Dept-10014",
+              "display": "Temp1"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "https://ncit.nci.nih.gov",
+                    "code": "C16666",
+                    "display": "Healthcare Provider"
+                  },
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "service-organization",
+                    "display": "Service Organization"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Organization/Organization-Dept-10015",
+              "display": "Temp2"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "https://ncit.nci.nih.gov",
+                    "code": "C170895",
+                    "display": "Primary Oncologist"
+                  },
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "primary-oncologist",
+                    "display": "Primary Oncologist"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Practitioner/Practitioner-5333",
+              "display": "Onco1"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "https://ncit.nci.nih.gov",
+                    "code": "C17821",
+                    "display": "Oncologist"
+                  },
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "oncologist",
+                    "display": "Oncologist"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Practitioner/Practitioner-5334",
+              "display": "DoctorD"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "https://ncit.nci.nih.gov",
+                    "code": "C63612",
+                    "display": "Staff"
+                  },
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "staff",
+                    "display": "Staff"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Practitioner/Practitioner-5335",
+              "display": "Doctor2"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "https://ncit.nci.nih.gov",
+                    "code": "C51860",
+                    "display": "Referring Physician"
+                  },
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "referring-physician",
+                    "display": "Referring Physician"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Practitioner/Practitioner-4363",
+              "display": "RLastName1 RGivenName1 RMiddleName1"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "https://ncit.nci.nih.gov",
+                    "code": "C51860",
+                    "display": "Referring Physician"
+                  },
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "referring-physician",
+                    "display": "Referring Physician"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Practitioner/Practitioner-5340",
+              "display": "RLastName_fhir RGivenName1 RMiddleName1"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "https://ncit.nci.nih.gov",
+                    "code": "C51860",
+                    "display": "Referring Physician"
+                  },
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "referring-physician",
+                    "display": "Referring Physician"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Practitioner/Practitioner-5341",
+              "display": "RLastName_fhir2 RGivenName2 RMiddleName2"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "https://ncit.nci.nih.gov",
+                    "code": "C17821",
+                    "display": "Oncologist"
+                  },
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "oncologist",
+                    "display": "Oncologist"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Practitioner/Practitioner-3165",
+              "display": "Atazgaqev, Mazz"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/Practitioner/Practitioner-5340",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner-5340",
+        "meta": {
+          "versionId": "534535462",
+          "lastUpdated": "2023-01-05T23:45:45.663-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Practitioner"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/practitioner-role",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/practitioner-role",
+                  "code": "doctor",
+                  "display": "Doctor"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://varian.com/fhir/identifier/Practitioner/Id",
+            "value": "RP1_fhir"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "5340"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "RLastName_fhir RGivenName1 RMiddleName1"
+            ]
+          },
+          {
+            "use": "official",
+            "family": "RLastName_fhir",
+            "given": [
+              "RGivenName1",
+              "RMiddleName1"
+            ],
+            "suffix": [
+              "I"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "id": "2555285",
+            "use": "work",
+            "type": "both"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/qualification",
+                  "code": "Unknown",
+                  "display": "Unknown"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/Organization/Organization-Dept-10013",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization-Dept-10013",
+        "meta": {
+          "versionId": "522971435",
+          "lastUpdated": "2022-12-07T00:46:26.487-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Organization"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/isChargeCaptureApplicable",
+            "valueBoolean": true
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Organization/dept/Id",
+            "value": "Cardiovascular"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "10013"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "dept",
+                "display": "Hospital Department"
+              }
+            ]
+          }
+        ],
+        "name": "Cardiovascular",
+        "partOf": {
+          "reference": "Organization/Organization-Prov-5",
+          "display": "ACCHospital"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/Practitioner/Practitioner-5341",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner-5341",
+        "meta": {
+          "versionId": "534545224",
+          "lastUpdated": "2023-01-05T23:46:49.883-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Practitioner"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/practitioner-role",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/practitioner-role",
+                  "code": "doctor",
+                  "display": "Doctor"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://varian.com/fhir/identifier/Practitioner/Id",
+            "value": "RP3_fhir"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "5341"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "RLastName_fhir2 RGivenName2 RMiddleName2"
+            ]
+          },
+          {
+            "use": "official",
+            "family": "RLastName_fhir2",
+            "given": [
+              "RGivenName2",
+              "RMiddleName2"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "id": "2556011",
+            "use": "work",
+            "type": "both"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/qualification",
+                  "code": "Addiction Medicine",
+                  "display": "Addiction Medicine"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/Organization/Organization-Dept-10014",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization-Dept-10014",
+        "meta": {
+          "versionId": "523003107",
+          "lastUpdated": "2022-12-13T22:52:14.667-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Organization"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/isChargeCaptureApplicable",
+            "valueBoolean": true
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Organization/dept/Id",
+            "value": "Temp1"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "10014"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "dept",
+                "display": "Hospital Department"
+              }
+            ]
+          }
+        ],
+        "name": "Temp1",
+        "partOf": {
+          "reference": "Organization/Organization-Prov-5",
+          "display": "ACCHospital"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/Practitioner/Practitioner-4363",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner-4363",
+        "meta": {
+          "versionId": "522194033",
+          "lastUpdated": "2022-08-09T11:12:45.230-07:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Practitioner"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/practitioner-role",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/practitioner-role",
+                  "code": "doctor",
+                  "display": "Doctor"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://varian.com/fhir/identifier/Practitioner/Id",
+            "value": "Doctor3"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "4363"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "RLastName1 RGivenName1 RMiddleName1"
+            ]
+          },
+          {
+            "use": "official",
+            "family": "RLastName1",
+            "given": [
+              "RGivenName1",
+              "RMiddleName1"
+            ],
+            "suffix": [
+              "I"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "id": "696935",
+            "use": "work",
+            "type": "both"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/qualification",
+                  "code": "Unknown",
+                  "display": "Unknown"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/Organization/Organization-Dept-10015",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization-Dept-10015",
+        "meta": {
+          "versionId": "523008366",
+          "lastUpdated": "2022-12-13T22:53:20.260-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Organization"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/isChargeCaptureApplicable",
+            "valueBoolean": true
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Organization/dept/Id",
+            "value": "Temp2"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "10015"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "dept",
+                "display": "Hospital Department"
+              }
+            ]
+          }
+        ],
+        "name": "Temp2",
+        "partOf": {
+          "reference": "Organization/Organization-Prov-5",
+          "display": "ACCHospital"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/Patient/Patient-944203",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-944203",
+        "meta": {
+          "versionId": "535417882",
+          "lastUpdated": "2023-01-10T20:59:58.507-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Patient"
+          ],
+          "tag": [
+            {
+              "code": "DirectiveStatus",
+              "display": "Present"
+            },
+            {
+              "code": "AllergyStatus",
+              "display": "Present"
+            },
+            {
+              "code": "InfectionStatus",
+              "display": "Not Present"
+            }
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "MothersMaidenName"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "American Indian or Alaska Native"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Other"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-citizenship",
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-citizenship",
+                      "code": "IND",
+                      "display": "India"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Nashik",
+              "country": "AFG"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-religion",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/patient-religion",
+                  "code": "Protestant",
+                  "display": "Protestant"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-status",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/patient-status",
+                  "code": "Previous Patient (NOP)"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-class",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/patient-class",
+                  "code": "In Patient"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#roomNumber",
+                "valueString": "1235"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#admissionDate",
+                "valueDate": "2015-07-02"
+              }
+            ]
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-deathReason",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/patient-deathReason",
+                  "code": "Accident",
+                  "display": "Accident"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-customAttributes",
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesCode",
+                      "code": "UserDefAttrib01",
+                      "display": "Department ID"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesValue",
+                      "code": "UserAttribute01",
+                      "display": "UserAttribute01"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-customAttributes",
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesCode",
+                      "code": "UserDefAttrib02",
+                      "display": "SNF"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesValue",
+                      "code": "UserAttribute02",
+                      "display": "UserAttribute02"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-customAttributes",
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesCode",
+                      "code": "UserDefAttrib03",
+                      "display": "ResearchRegistry"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesValue",
+                      "code": "UserAttribute03",
+                      "display": "UserAttribute03"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-customAttributes",
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesCode",
+                      "code": "UserDefAttrib04",
+                      "display": "EPIC Name"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesValue",
+                      "code": "UserAttribute04",
+                      "display": "UserAttribute04"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/recordedOn",
+            "valueDateTime": "2023-01-05T23:46:49-08:00"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/person-gender",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/person-gender",
+                  "code": "Other",
+                  "display": "Other"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-clinicalTrial",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-carePlan",
+            "valueReference": {
+              "reference": "CarePlan/CarePlan-380032",
+              "display": "Added Activities"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-autopsyDetails",
+            "extension": [
+              {
+                "url": "status",
+                "valueCodeableConcept": {
+                  "text": "Y"
+                }
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://varian.com/fhir/identifier/Patient/ARIAID1",
+            "value": "pid211222011034_fhir"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/MedOnc-Id",
+            "value": "07350000000000585370"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/RadOnc-Id",
+            "value": "944203"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/patient-uid",
+            "value": "1.2.246.352.76.12.958500816058.944203.2300582909227"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/UID",
+            "value": "UniversalId"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "JONES9",
+            "given": [
+              "WILLIAM9",
+              "D"
+            ],
+            "suffix": [
+              "IV"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(020)020020020",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "(0253)2390390",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "9595959959",
+            "use": "mobile"
+          },
+          {
+            "system": "email",
+            "value": "aa@aa.com",
+            "use": "home"
+          },
+          {
+            "system": "fax",
+            "value": "55555",
+            "use": "home"
+          },
+          {
+            "system": "pager",
+            "value": "88888",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "(0253)2380380",
+            "use": "temp"
+          }
+        ],
+        "gender": "other",
+        "birthDate": "2000-01-01",
+        "address": [
+          {
+            "id": "2555997",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": true
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/address-telephone1",
+                "valueString": "(0253)2390390"
+              }
+            ],
+            "use": "home",
+            "type": "both",
+            "line": [
+              "120 PAWAR NAGAR N ELM STREET",
+              "Thergaon1"
+            ],
+            "city": "GREENSBORO",
+            "district": "IND",
+            "state": "NC",
+            "postalCode": "27401-1020",
+            "country": "IND"
+          },
+          {
+            "id": "2555998",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": true
+              }
+            ],
+            "use": "temp",
+            "type": "both",
+            "line": [
+              "1202 PAWAR NAGAR N ELM STREET",
+              "Thergaon2"
+            ],
+            "city": "GREENSBORO",
+            "district": "IND",
+            "state": "NC",
+            "postalCode": "27401-1020",
+            "country": "IND"
+          },
+          {
+            "id": "2555999",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": false
+              }
+            ],
+            "use": "temp",
+            "type": "both",
+            "line": [
+              "1203 PAWAR NAGAR N ELM STREET",
+              "Thergaon3"
+            ],
+            "city": "GREENSBORO",
+            "district": "IND",
+            "state": "NC",
+            "postalCode": "27401-1020",
+            "country": "IND"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/ValueSet/marital-status",
+              "code": "M",
+              "display": "Married"
+            },
+            {
+              "system": "http://varian.com/fhir/CodeSystem/patient-marital-status",
+              "code": "MARRIED",
+              "display": "Married"
+            }
+          ]
+        },
+        "contact": [
+          {
+            "id": "359924",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-subrelation",
+                "valueString": "Father"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-isPrimary",
+                "valueBoolean": false
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationTaskName",
+                "valueString": "3c66df24a5b84537ae134b4ad64d612c"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationUser",
+                "valueReference": {
+                  "reference": "Practitioner/Practitioner-5336",
+                  "display": "FHIRHeadLessClient_CI"
+                }
+              }
+            ],
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "C",
+                    "display": "Emergency Contact"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "official",
+              "family": "Contact1",
+              "given": [
+                "One"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "(020)020020020",
+                "use": "work"
+              },
+              {
+                "system": "phone",
+                "value": "(0253)2390390",
+                "use": "home"
+              },
+              {
+                "system": "phone",
+                "value": "9595959959",
+                "use": "mobile"
+              },
+              {
+                "system": "email",
+                "value": "aa@aa.com",
+                "use": "home"
+              },
+              {
+                "system": "fax",
+                "value": "55555",
+                "use": "home"
+              },
+              {
+                "system": "phone",
+                "value": "(0253)2380380",
+                "use": "temp"
+              }
+            ],
+            "address": {
+              "id": "2562606",
+              "use": "home",
+              "type": "both",
+              "line": [
+                "123 PAWAR NAGAR Update Street",
+                "Thergaon"
+              ],
+              "city": "Palo Alto",
+              "state": "CA",
+              "postalCode": "90878",
+              "country": "IND"
+            }
+          },
+          {
+            "id": "359925",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-subrelation",
+                "valueString": "Mother"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-isPrimary",
+                "valueBoolean": true
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationTaskName",
+                "valueString": "3c66df24a5b84537ae134b4ad64d612c"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationUser",
+                "valueReference": {
+                  "reference": "Practitioner/Practitioner-5336",
+                  "display": "FHIRHeadLessClient_CI"
+                }
+              }
+            ],
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "C",
+                    "display": "Emergency Contact"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "official",
+              "family": "Contact2",
+              "given": [
+                "One"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "(020)020020020",
+                "use": "work"
+              },
+              {
+                "system": "phone",
+                "value": "(0253)2390390",
+                "use": "home"
+              },
+              {
+                "system": "phone",
+                "value": "9595959959",
+                "use": "mobile"
+              },
+              {
+                "system": "email",
+                "value": "aa@aa.com",
+                "use": "home"
+              },
+              {
+                "system": "fax",
+                "value": "55555",
+                "use": "home"
+              },
+              {
+                "system": "phone",
+                "value": "(0253)2380380",
+                "use": "temp"
+              }
+            ],
+            "address": {
+              "id": "2562607",
+              "use": "home",
+              "type": "both",
+              "line": [
+                "123 PAWAR NAGAR2 Update Street2",
+                "Thergaon"
+              ],
+              "city": "Palo Alto",
+              "state": "CA",
+              "postalCode": "90878",
+              "country": "IND"
+            }
+          },
+          {
+            "id": "302049",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-subrelation",
+                "valueString": "Employer"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-isPrimary",
+                "valueBoolean": false
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationTaskName",
+                "valueString": "3c66df24a5b84537ae134b4ad64d612c"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationUser",
+                "valueReference": {
+                  "reference": "Practitioner/Practitioner-5336",
+                  "display": "FHIRHeadLessClient_CI"
+                }
+              }
+            ],
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "E",
+                    "display": "Employer"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "official",
+              "given": [
+                "Employer1 Name"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "(020)020020020",
+                "use": "work"
+              }
+            ],
+            "address": {
+              "id": "2562608",
+              "use": "work",
+              "type": "both",
+              "line": [
+                "123 Employer NAGAR Employer Street",
+                "Thergaon"
+              ],
+              "city": "Palo Alto",
+              "state": "CA",
+              "postalCode": "90878",
+              "country": "IND"
+            }
+          },
+          {
+            "id": "302050",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-subrelation",
+                "valueString": "Employer"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-isPrimary",
+                "valueBoolean": true
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationTaskName",
+                "valueString": "3c66df24a5b84537ae134b4ad64d612c"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationUser",
+                "valueReference": {
+                  "reference": "Practitioner/Practitioner-5336",
+                  "display": "FHIRHeadLessClient_CI"
+                }
+              }
+            ],
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "E",
+                    "display": "Employer"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "official",
+              "given": [
+                "Employer2 Name"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "(020)020020020",
+                "use": "work"
+              }
+            ],
+            "address": {
+              "id": "2562609",
+              "use": "work",
+              "type": "both",
+              "line": [
+                "Employer NAGAR2 Employer Street2",
+                "Thergaon"
+              ],
+              "city": "Palo Alto",
+              "state": "CA",
+              "postalCode": "90878"
+            }
+          },
+          {
+            "id": "147777",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-contact-isPrimary",
+                "valueBoolean": true
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-modeOfArrival",
+                "valueCodeableConcept": {
+                  "text": "Ambulance"
+                }
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationTaskName",
+                "valueString": "3c66df24a5b84537ae134b4ad64d612c"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/lastModificationUser",
+                "valueReference": {
+                  "reference": "Practitioner/Practitioner-5336",
+                  "display": "FHIRHeadLessClient_CI"
+                }
+              }
+            ],
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "O",
+                    "display": "Other"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "official",
+              "given": [
+                "Ambulance"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "02532333",
+                "use": "work"
+              }
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/communication-language",
+                  "code": "Polish",
+                  "display": "Polish"
+                }
+              ]
+            }
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/Organization-Prov-5",
+          "display": "ACCHospital"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/Practitioner/Practitioner-3165",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner-3165",
+        "meta": {
+          "versionId": "522193153",
+          "lastUpdated": "2022-08-09T11:12:45.230-07:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Practitioner"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-3",
+              "display": "Hw. Aaliavev"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10002",
+              "display": "Laaeuoj"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/defaultServiceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-3",
+              "display": "Hw. Aaliavev"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/practitioner-role",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/practitioner-role",
+                  "code": "oncologist",
+                  "display": "Oncologist"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://varian.com/fhir/identifier/Practitioner/Id",
+            "value": "BUZC.PF"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "3165"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "Atazgaqev, Mazz"
+            ]
+          },
+          {
+            "use": "official",
+            "family": "Batto",
+            "given": [
+              "Shirley"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "id": "83173",
+            "use": "work",
+            "type": "both"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/qualification",
+                  "code": "Oncologist",
+                  "display": "Oncologist"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/Practitioner/Practitioner-5333",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner-5333",
+        "meta": {
+          "versionId": "523111003",
+          "lastUpdated": "2022-12-21T02:40:14.740-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Practitioner"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10011",
+              "display": "OIS_ID1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10013",
+              "display": "Cardiovascular"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10014",
+              "display": "Temp1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10015",
+              "display": "Temp2"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/practitioner-role",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/practitioner-role",
+                  "code": "oncologist",
+                  "display": "Oncologist"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://varian.com/fhir/identifier/Practitioner/Id",
+            "value": "Onco1"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "5333"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "Onco1"
+            ]
+          },
+          {
+            "use": "official",
+            "family": "oncol",
+            "given": [
+              "oncof"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "id": "1606803",
+            "use": "work",
+            "type": "both"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/qualification",
+                  "code": "Addiction Medicine",
+                  "display": "Addiction Medicine"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/Practitioner/Practitioner-5334",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner-5334",
+        "meta": {
+          "versionId": "523111013",
+          "lastUpdated": "2022-12-21T02:41:16.687-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Practitioner"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10011",
+              "display": "OIS_ID1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10013",
+              "display": "Cardiovascular"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10014",
+              "display": "Temp1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10015",
+              "display": "Temp2"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/practitioner-role",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/practitioner-role",
+                  "code": "oncologist",
+                  "display": "Oncologist"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://varian.com/fhir/identifier/Practitioner/Id",
+            "value": "Doc1"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "5334"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "DoctorD"
+            ]
+          },
+          {
+            "use": "official",
+            "family": "doc1l",
+            "given": [
+              "dc1f"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "id": "1606804",
+            "use": "work",
+            "type": "both"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/qualification",
+                  "code": "Addiction Medicine",
+                  "display": "Addiction Medicine"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://win-kmcm1e8bggj:44370/4.2/fhir/Practitioner/Practitioner-5335",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner-5335",
+        "meta": {
+          "versionId": "523111034",
+          "lastUpdated": "2022-12-21T02:42:45.660-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Practitioner"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10011",
+              "display": "OIS_ID1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10013",
+              "display": "Cardiovascular"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10014",
+              "display": "Temp1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10015",
+              "display": "Temp2"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/practitioner-role",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/practitioner-role",
+                  "code": "staff",
+                  "display": "Staff"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://varian.com/fhir/identifier/Practitioner/Id",
+            "value": "Doctor2"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "5335"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "Doctor2"
+            ]
+          },
+          {
+            "use": "official",
+            "family": "Doctor2L",
+            "given": [
+              "Doctor2F"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "id": "1606805",
+            "use": "work",
+            "type": "both"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/qualification",
+                  "code": "Abdominal Surgery",
+                  "display": "Abdominal Surgery"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "HealthcareService",
+        "id": "HealthcareService-10011",
+        "meta": {
+          "versionId": "508567180",
+          "lastUpdated": "2021-01-11T09:58:54.533-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/HealthcareService"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/HealthcareService/Id",
+            "value": "OIS_ID1"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "10011"
+          }
+        ],
+        "active": true,
+        "providedBy": {
+          "reference": "Organization/Organization-Dept-10011",
+          "display": "OIS_ID1"
+        },
+        "name": "OIS_ID1",
+        "appointmentRequired": true
+      }
+    },
+    {
+      "resource": {
+        "resourceType":"Location",
+        "id": "Location-1217",
+        "meta": {
+          "versionId": "535251500",
+          "lastUpdated": "2023-01-08T23:59:14.720-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Location"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10013",
+              "display": "Cardiovascular"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10011",
+              "display": "OIS_ID1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10015",
+              "display": "Temp2"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": true
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Location/Id",
+            "value": "SMH NucletronHDR"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "1217"
+          }
+        ],
+        "status": "active",
+        "name": "SMH NucletronHDR",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/ValueSet/Location-type",
+                "code": "Auxiliary",
+                "display": "Auxiliary"
+              }
+            ],
+            "text": "Auxiliary"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/ValueSet/Location-physical-type",
+                "code": "Treatment",
+                "display": "Treatment"
+              }
+            ],
+            "text": "Treatment"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location-2796",
+        "meta": {
+          "versionId": "535251510",
+          "lastUpdated": "2023-01-09T00:00:09.817-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Location"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-7",
+              "display": "Haktabakd"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10011",
+              "display": "OIS_ID1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": true
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Location/Id",
+            "value": "Treatment Device"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "2796"
+          }
+        ],
+        "status": "active",
+        "name": "Head and Neck Holder",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/ValueSet/Location-type",
+                "code": "Auxiliary",
+                "display": "Auxiliary"
+              }
+            ],
+            "text": "Auxiliary"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/ValueSet/Location-physical-type",
+                "code": "Treatment",
+                "display": "Treatment"
+              }
+            ],
+            "text": "Treatment"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner-5333",
+        "meta": {
+          "versionId": "523111003",
+          "lastUpdated": "2022-12-21T02:40:14.740-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Practitioner"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10011",
+              "display": "OIS_ID1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10013",
+              "display": "Cardiovascular"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10014",
+              "display": "Temp1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10015",
+              "display": "Temp2"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/practitioner-role",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/practitioner-role",
+                  "code": "oncologist",
+                  "display": "Oncologist"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://varian.com/fhir/identifier/Practitioner/Id",
+            "value": "Onco1"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "5333"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "Onco1"
+            ]
+          },
+          {
+            "use": "official",
+            "family": "oncol",
+            "given": [
+              "oncof"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "id": "1606803",
+            "use": "work",
+            "type": "both"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/qualification",
+                  "code": "Addiction Medicine",
+                  "display": "Addiction Medicine"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner-5328",
+        "meta": {
+          "versionId": "523074847",
+          "lastUpdated": "2022-12-20T04:40:00.903-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Practitioner"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10005",
+              "display": "Bakximzsoy"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10011",
+              "display": "OIS_ID1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10013",
+              "display": "Cardiovascular"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10014",
+              "display": "Temp1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10015",
+              "display": "Temp2"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/practitioner-role",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/practitioner-role",
+                  "code": "oncologist",
+                  "display": "Oncologist"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://varian.com/fhir/identifier/Practitioner/Id",
+            "value": "ACDoc"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Practitioner/Stakeholder-Id",
+            "value": "577"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Practitioner/UserName",
+            "value": "ARIA_CONNECT_VAIS_CLIENT"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "5328"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Practitioner/user-cuid",
+            "value": "8925f2cf-595b-4ad1-827c-507f1072cf7b"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "ARIA_CONNECT_VAIS_CLIENT"
+            ]
+          },
+          {
+            "use": "official",
+            "family": "AcDocLast",
+            "given": [
+              "ACDocFirst"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "id": "1601615",
+            "use": "work",
+            "type": "both"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/Practitioner/qualification",
+                  "code": "Allergy",
+                  "display": "Allergy"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Device",
+        "id": "Device-432",
+        "meta": {
+          "versionId": "44933",
+          "lastUpdated": "2023-01-08T23:59:51.947-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Device"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10011",
+              "display": "OIS_ID1"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "432"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Device/Id",
+            "value": "EOGYL"
+          }
+        ],
+        "status": "active",
+        "deviceName": [
+          {
+            "name": "LBRTY",
+            "type": "user-friendly-name"
+          }
+        ],
+        "modelNumber": "Varian_CT-Option_Imager",
+        "type": {
+          "coding": [
+            {
+              "system": "http://varian.com/fhir/ValueSet/Device-type",
+              "code": "ImagingDevice"
+            }
+          ],
+          "text": "ImagingDevice"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Device",
+        "id": "Device-390",
+        "meta": {
+          "versionId": "44933",
+          "lastUpdated": "2023-01-09T00:01:27.737-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Device"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-8",
+              "display": "Ijalrdiae"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10011",
+              "display": "OIS_ID1"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "390"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/Device/Id",
+            "value": "17mpkifu"
+          }
+        ],
+        "status": "active",
+        "deviceName": [
+          {
+            "name": "37eniwiq",
+            "type": "user-friendly-name"
+          }
+        ],
+        "modelNumber": "23EX",
+        "type": {
+          "coding": [
+            {
+              "system": "http://varian.com/fhir/ValueSet/Device-type",
+              "code": "RadiationDevice"
+            }
+          ],
+          "text": "RadiationDevice"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location-22",
+        "meta": {
+          "versionId": "535251512",
+          "lastUpdated": "2023-01-09T00:00:36.877-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Location"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10005",
+              "display": "Bakximzsoy"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-7",
+              "display": "Haktabakd"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-3",
+              "display": "Hw. Aaliavev"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-8",
+              "display": "Ijalrdiae"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-11",
+              "display": "Jceaxfgeziav"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-14",
+              "display": "Kawwew"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10002",
+              "display": "Laaeuoj"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10011",
+              "display": "OIS_ID1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-16",
+              "display": "Oooe"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-15",
+              "display": "Peadev"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-4",
+              "display": "Raree"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-6",
+              "display": "RO Fuhmja"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-9",
+              "display": "Tc. Ecaip"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": true
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Location/Id",
+            "value": "Eqlzmpa Yppp"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "22"
+          }
+        ],
+        "status": "active",
+        "name": "Venue22",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/ValueSet/Location-type",
+                "code": "Venue",
+                "display": "Venue"
+              }
+            ],
+            "text": "Venue"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/ValueSet/Location-physical-type",
+                "code": "Treatment",
+                "display": "Treatment"
+              }
+            ],
+            "text": "Treatment"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location-4365",
+        "meta": {
+          "versionId": "535251504",
+          "lastUpdated": "2023-01-08T23:59:36.527-08:00",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Location"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10005",
+              "display": "Bakximzsoy"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10007",
+              "display": "Eqimkceab"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-17",
+              "display": "Foliyol"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-7",
+              "display": "Haktabakd"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-3",
+              "display": "Hw. Aaliavev"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-8",
+              "display": "Ijalrdiae"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-11",
+              "display": "Jceaxfgeziav"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-14",
+              "display": "Kawwew"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10002",
+              "display": "Laaeuoj"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10011",
+              "display": "OIS_ID1"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-16",
+              "display": "Oooe"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-10004",
+              "display": "Otio Fatues Ueeipak Nedxed"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-15",
+              "display": "Peadev"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-12",
+              "display": "Qdadzewwk"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-4",
+              "display": "Raree"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-6",
+              "display": "RO Fuhmja"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-9",
+              "display": "Tc. Ecaip"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/serviceOrganization",
+            "valueReference": {
+              "reference": "Organization/Organization-Dept-1",
+              "display": "Zeukeoyor"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/schedulable",
+            "valueBoolean": true
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Location/Id",
+            "value": "Venue1"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/RadOnc-Id",
+            "value": "4365"
+          }
+        ],
+        "status": "active",
+        "name": "Venue1",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/ValueSet/Location-type",
+                "code": "Venue",
+                "display": "Venue"
+              }
+            ],
+            "text": "Venue"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://varian.com/fhir/ValueSet/Location-physical-type",
+                "code": "Conference Room",
+                "display": "Conference Room"
+              }
+            ],
+            "text": "Conference Room"
+          }
+        ]
+      }
+    }
+  ]
+}

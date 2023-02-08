@@ -1,0 +1,152 @@
+{
+  "resourceType": "Bundle",
+  "id": "97577822-4e1f-42f2-a5f4-6df24b43f149",
+  "meta": {
+    "lastUpdated": "2021-02-05T15:06:15.358+05:30"
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://ariav16dc:44370/fhir/Patient?_revinclude=CareTeam%3Apatient&identifier=TestPatient_210102_up3"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://ariav16dc:44370/fhir/Patient/Patient-191",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-191",
+        "meta": {
+          "versionId": "550069",
+          "lastUpdated": "2021-02-02T18:31:24.790+05:30",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Patient"
+          ],
+          "tag": [
+            {
+              "code": "DirectiveStatus",
+              "display": "Not Present"
+            },
+            {
+              "code": "AllergyStatus",
+              "display": "Not Present"
+            },
+            {
+              "code": "InfectionStatus",
+              "display": "Not Present"
+            }
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "MothersMaidenName"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-class",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/patient-class",
+                  "code": "Out Patient"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails",
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#roomNumber",
+                "valueString": "1235"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#admissionDate",
+                "valueDate": "2015-07-02"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#dischargeDate",
+                "valueDate": "2015-07-05"
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/ARIAID1",
+            "value": "TestPatient_210102_up3"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "AutomationUp2",
+            "given": [
+              "Test"
+            ],
+            "suffix": [
+              "IV"
+            ]
+          }
+        ],
+        "gender": "other",
+        "birthDate": "2000-01-01",
+        "managingOrganization": {
+          "reference": "Organization/Organization-Prov-1",
+          "display": "ACHospital"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://ariav16dc:44370/fhir/CareTeam/CareTeam-191",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "CareTeam-191",
+        "meta": {
+          "versionId": "44228",
+          "lastUpdated": "2021-02-02T18:31:25.340+05:30",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/CareTeam"
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Patient-191",
+          "display": "AutomationUp2, Test"
+        },
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "https://ncit.nci.nih.gov",
+                    "code": "C93060",
+                    "display": "Primary Health Care Provider"
+                  },
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "default-service-organization",
+                    "display": "Default Service Organization"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Organization/Organization-Dept-1",
+              "display": "TEST_ID1"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}

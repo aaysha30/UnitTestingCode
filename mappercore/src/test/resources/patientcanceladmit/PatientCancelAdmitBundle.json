@@ -1,0 +1,359 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Parameters",
+        "parameter": [
+          {
+            "name": "Source",
+            "valueString": "Hl7"
+          },
+          {
+            "name": "Subject",
+            "valueString": "PatientCancelAdmit"
+          },
+          {
+            "name": "Event",
+            "valueString": "ADT^A11"
+          },
+          {
+            "name": "SuppressUpdateOnPrimaryCheck",
+            "valueString": "0"
+          },
+          {
+            "name": "SnapshotAllergy",
+            "valueBoolean": false
+          },
+          {
+            "name": "PrimaryCoverage",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotCoverage",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotCondition",
+            "valueBoolean": false
+          },
+          {
+            "name": "CurrentDatetime",
+            "valueString": "2021-03-23T17:05:35"
+          },
+          {
+            "name": "DefaultHospitalName"
+          },
+          {
+            "name": "DefaultDepartmentId"
+          },
+          {
+            "name": "DefaultRoomNumber",
+            "valueString": "Unknown"
+          },
+          {
+            "name": "AutoCreateEvents",
+            "valueString": "ADT^A01,ADT^A02,ADT^A03,ADT^A04,ADT^A05,ADT^A06,ADT^A07,ADT^A08,ADT^A14,ADT^A15,ADT^A22,ADT^A28,ADT^A31"
+          },
+          {
+            "name": "AdvPatientClassProcess",
+            "valueString": "0"
+          },
+          {
+            "name": "PatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name": "MergePatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name": "AutoCreateReferringPhysician",
+            "valueString": "1"
+          },
+          {
+            "name": "DenySnapshotOnDirectiveComment"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MessageHeader",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/MessageHeader"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/receivingApplication",
+            "valueString": "RA"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/receivingFacility",
+            "valueString": "RF"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/messageControlId",
+            "valueString": "000000347"
+          }
+        ],
+        "source": {
+          "name": "SA",
+          "software": "SF"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Patient"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "MothersMaidenName"
+          },
+          {
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "American Indian or Alaska Native"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": true
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Other"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": true
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          },
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-citizenship",
+                      "code": "India"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Pune",
+              "country": "Pakistan"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-status",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "Previous Patient (NOP)"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-class",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "In Patient"
+                }
+              ]
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#roomNumber",
+                "valueString": "1235"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#admissionDate",
+                "valueDate": "2015-07-02"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#dischargeDate",
+                "valueDate": "2015-07-02"
+              }
+            ],
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-location#venue",
+            "valueIdentifier": {
+              "system": "http://varian.com/fhir/identifier/Location/Id",
+              "value": "PoC"
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesCode",
+                      "code": "UserDefAttrib15",
+                      "display": "UserDefAttrib15"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-customAttributesValue",
+                      "code": "UserAttribute15"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-customAttributes"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/ARIAID1",
+            "value": "TestPatient"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "JONES9",
+            "given": [
+              "WILLIAM9",
+              "D"
+            ],
+            "suffix": [
+              "IV"
+            ]
+          }
+        ],
+        "birthDate": "2000-01-01T01:01:01",
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://varian.com/fhir/CodeSystem/patient-marital-status",
+              "code": "Married"
+            }
+          ]
+        },
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "http://varian.com/ocs/fhir/patient/communication-language",
+                  "code": "Polish"
+                }
+              ]
+            }
+          }
+        ],
+        "managingOrganization": {
+          "display": "ACHospital"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CareTeam",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/CareTeam"
+          ]
+        },
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "default-service-organization"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "display": "OIS_ID1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Account",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Account"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/Account-inpatient",
+            "valueBoolean": true
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Account/Id",
+            "value": "1112"
+          }
+        ],
+        "status": "active",
+        "name": "ALbl",
+        "subject": [
+          {
+            "reference": "Patient-patientId",
+            "type": "Patient"
+          }
+        ],
+        "servicePeriod": {
+          "start": "2015-07-06",
+          "end": "2015-07-07"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Parameters",
+        "parameter": [
+          {
+            "name": "Source",
+            "valueString": "Hl7"
+          },
+          {
+            "name": "Subject",
+            "valueString": "PatientSave"
+          },
+          {
+            "name": "CurrentDateTime",
+            "valueString": "2021-01-15T16:54:30"
+          },
+          {
+            "name": "PatientIdentifier",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name": "DefaultHospitalName"
+          },
+          {
+            "name": "DefaultDepartmentId"
+          },
+          {
+            "name": "DefaultRoomNumber"
+          },
+          {
+            "name": "SetPrimaryOncologist",
+            "valueBoolean": false
+          },
+          {
+            "name": "SetPrimaryReferringPhysician",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotAllergy",
+            "valueBoolean": false
+          },
+          {
+            "name": "SetPrimaryCoverage",
+            "valueBoolean": false
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MessageHeader",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/r4/StructureDefinition/MessageHeader"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/receivingApplication",
+            "valueString": "RA"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/receivingFacility",
+            "valueString": "RF"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/messageControlId",
+            "valueString": "000000347"
+          }
+        ],
+        "eventCoding": {
+          "system": "A04",
+          "code": "ADT"
+        },
+        "source": {
+          "name": "SA",
+          "software": "SF"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Patient"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "TestMaidenName"
+          },
+          {
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "American Indian or Alaska Native"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          },
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-citizenship",
+                      "code": "India"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Pune",
+              "country": "PAK"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-class",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "In Patient"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-religion",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/patient-religion",
+                  "code": "Protestant"
+                }
+              ]
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#roomNumber",
+                "valueString": "12345"
+              }
+            ],
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/recordedOn",
+            "valueDateTime": "2021-01-15T16:54:30"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/person-gender",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/patient-ariaGender",
+                  "code": "Male"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/ARIAID1",
+            "value": "jan13_001"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "suffix": [
+              "Sfx"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(0253)2380380",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "testHome@email.com",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "(020)999999999",
+            "use": "work"
+          }
+        ],
+        "birthDate": "2000-10-20T11:22:33",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/address-primary",
+                "valueBoolean": true
+              }
+            ],
+            "use": "home",
+            "type": "both",
+            "line": [
+              "121MagarpattaN Main Street",
+              "Hadapsar"
+            ],
+            "city": "GREENSBORO",
+            "district": "LKA",
+            "state": "NC",
+            "postalCode": "27401-1020",
+            "country": "India"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://varian.com/fhir/CodeSystem/patient-marital-status",
+              "code": "TestMarried"
+            }
+          ]
+        },
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "http://varian.com/ocs/fhir/patient/communication-language",
+                  "code": "Polish"
+                }
+              ]
+            }
+          }
+        ],
+        "managingOrganization": {
+          "display": "ACHospital"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CareTeam",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/CareTeam"
+          ]
+        },
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "service-organization"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "display": "TEST_ID1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Account",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Account"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Account/Id",
+            "value": "12355"
+          }
+        ],
+        "status": "active",
+        "servicePeriod": {
+          "start": "2019-07-05",
+          "end": "2020-06-08"
+        }
+      }
+    }
+  ]
+}

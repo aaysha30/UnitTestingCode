@@ -1,0 +1,112 @@
+{
+  "resourceType": "Bundle",
+  "id": "97577822-4e1f-42f2-a5f4-6df24b43f149",
+  "meta": {
+    "lastUpdated": "2021-02-05T15:06:15.358+05:30"
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://ariav16dc:44370/fhir/Patient?_revinclude=CareTeam%3Apatient&identifier=TestPatient_210102_up3"
+    }
+  ],
+  "entry": [
+    {
+      "resource":{
+        "resourceType":"Parameters",
+        "parameter":[
+          {
+            "name":"Source",
+            "valueString":"Hl7"
+          },
+          {
+            "name":"Subject",
+            "valueString":"PatientSave"
+          },
+          {
+            "name":"CurrentDateTime",
+            "valueString":"2021-02-04T10:48:19"
+          },
+          {
+            "name":"PatientIdentifier",
+            "valueString":"http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name":"DefaultHospitalName",
+            "valueString": ""
+          },
+          {
+            "name":"DefaultDepartmentId",
+            "valueString": ""
+          },
+          {
+            "name":"DefaultRoomNumber"
+          },
+          {
+            "name":"PrimaryOncologist",
+            "valueBoolean":false
+          },
+          {
+            "name":"PrimaryReferringPhysician",
+            "valueBoolean":false
+          },
+          {
+            "name":"SnapshotAllergy",
+            "valueBoolean":false
+          },
+          {
+            "name":"PrimaryCoverage",
+            "valueBoolean":false
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://ariav16dc:44370/fhir/CareTeam/CareTeam-191",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "CareTeam-191",
+        "meta": {
+          "versionId": "44228",
+          "lastUpdated": "2021-02-02T18:31:25.340+05:30",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/CareTeam"
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Patient-191",
+          "display": "AutomationUp2, Test"
+        },
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "https://ncit.nci.nih.gov",
+                    "code": "C93060",
+                    "display": "Primary Health Care Provider"
+                  },
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "default-service-organization",
+                    "display": "Default Service Organization"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Organization/Organization-Dept-1",
+              "display": "TEST_ID1"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}

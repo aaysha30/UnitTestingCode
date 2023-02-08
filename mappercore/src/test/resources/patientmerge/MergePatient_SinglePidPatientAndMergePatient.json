@@ -1,0 +1,199 @@
+{
+  "resourceType":"Bundle",
+  "entry":[
+    {
+      "resource": {
+        "resourceType": "Parameters",
+        "parameter": [
+          {
+            "name": "Source",
+            "valueString": "Hl7"
+          },
+          {
+            "name": "Subject",
+            "valueString": "PatientMerge"
+          },
+          {
+            "name": "PrimaryOncologist",
+            "valueBoolean": false
+          },
+          {
+            "name": "PrimaryReferringPhysician",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotAllergy",
+            "valueBoolean": false
+          },
+          {
+            "name": "PrimaryCoverage",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotCoverage",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotCondition",
+            "valueBoolean": false
+          },
+          {
+            "name": "CurrentDatetime",
+            "valueString": "2021-02-15T18:08:26"
+          },
+          {
+            "name": "DefaultHospitalName",
+            "valueString": "ACHospital"
+          },
+          {
+            "name": "DefaultDepartmentId"
+          },
+          {
+            "name": "DefaultRoomNumber",
+            "valueString": "Unknown"
+          },
+          {
+            "name": "AutoCreateEvents",
+            "valueString": "ADT^A01,ADT^A02,ADT^A03,ADT^A04,ADT^A05,ADT^A06,ADT^A07,ADT^A08,ADT^A14,ADT^A15,ADT^A22,ADT^A28,ADT^A31"
+          },
+          {
+            "name": "PatientIdentifierTypeCodeFhirPrefix",
+            "valueString": "http://varian.com/fhir/identifier/Patient/"
+          },
+          {
+            "name": "PatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name": "PatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID2"
+          },
+          {
+            "name": "MergePatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name": "MergePatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID2"
+          }
+        ]
+      }
+    },
+    {
+      "resource":{
+        "resourceType":"MessageHeader",
+        "meta":{
+          "profile":[
+            "http://varian.com/fhir/v1/StructureDefinition/MessageHeader"
+          ]
+        },
+        "extension":[
+          {
+            "url":"http://hl7.org/fhir/StructureDefinition/receivingApplication",
+            "valueString":"7edit.com"
+          },
+          {
+            "url":"http://hl7.org/fhir/StructureDefinition/receivingFacility"
+          },
+          {
+            "url":"http://hl7.org/fhir/StructureDefinition/messageControlId",
+            "valueString":"MSG-20210202-093845-0499"
+          }
+        ],
+        "eventCoding":{
+          "system":"A34",
+          "code":"ADT"
+        },
+        "source":{
+          "name":"7edit.com"
+        }
+      }
+    },
+    {
+      "resource":{
+        "resourceType":"Patient",
+        "id":"Patient-0",
+        "meta":{
+          "profile":[
+            "http://varian.com/fhir/v1/StructureDefinition/Patient"
+          ]
+        },
+        "extension":[
+          {
+            "url":"http://varian.com/fhir/v1/StructureDefinition/recordedOn",
+            "valueDateTime":"2021-02-02T18:06:53"
+          },
+          {
+            "url":"http://varian.com/fhir/v1/StructureDefinition/patient-class",
+            "valueCodeableConcept":{
+              "coding":[
+                {
+                  "code":"Out Patient"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier":[
+          {
+            "system":"http://varian.com/fhir/identifier/Patient/ARIAID1",
+            "value":"TestPatient_250102"
+          }
+        ],
+        "name":[
+          {
+            "use":"official",
+            "family":"PidPatient",
+            "given":[
+              "Test"
+            ]
+          }
+        ],
+        "link":[
+          {
+            "other":{
+              "reference":"MergePatient-0"
+            },
+            "type":"replaces"
+          }
+        ]
+      }
+    },
+    {
+      "resource":{
+        "resourceType":"Patient",
+        "id":"MergePatient-0",
+        "meta":{
+          "profile":[
+            "http://varian.com/fhir/v1/StructureDefinition/Patient"
+          ]
+        },
+        "identifier":[
+          {
+            "system":"http://varian.com/fhir/identifier/Patient/ARIAID1",
+            "value":"TestPatient_231201"
+          }
+        ],
+        "name":[
+          {
+            "use":"official",
+            "family":"MergePatient"
+          }
+        ]
+      }
+    },
+    {
+      "resource":{
+        "resourceType":"CareTeam",
+        "meta":{
+          "profile":[
+            "http://varian.com/fhir/v1/StructureDefinition/CareTeam"
+          ]
+        },
+        "subject":{
+          "reference":"Patient-0"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Parameters",
+        "parameter": [
+          {
+            "name": "Source",
+            "valueString": "Hl7"
+          },
+          {
+            "name": "Subject",
+            "valueString": "PatientSave"
+          },
+          {
+            "name":"Event",
+            "valueString":"ADT^A04"
+          },
+          {
+            "name": "SuppressUpdateOnPrimaryCheck",
+            "valueString": "0"
+          },
+          {
+            "name": "PrimaryReferringPhysician",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotAllergy",
+            "valueBoolean": false
+          },
+          {
+            "name": "PrimaryCoverage",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotCoverage",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotCondition",
+            "valueBoolean": false
+          },
+          {
+            "name": "CurrentDatetime",
+            "valueString": "2021-02-15T18:08:26"
+          },
+          {
+            "name": "DefaultHospitalName",
+            "valueString": "ACHospital"
+          },
+          {
+            "name": "DefaultDepartmentId"
+          },
+          {
+            "name": "DefaultRoomNumber",
+            "valueString": "Unknown"
+          },
+          {
+            "name": "AutoCreateEvents",
+            "valueString": "ADT^A01,ADT^A02,ADT^A03,ADT^A04,ADT^A05,ADT^A06,ADT^A07,ADT^A08,ADT^A14,ADT^A15,ADT^A22,ADT^A28,ADT^A31"
+          },
+          {
+            "name": "AdvPatinetClassProcess",
+            "valueString": "0"
+          },
+          {
+            "name": "PatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name": "PatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID2"
+          },
+          {
+            "name": "MergePatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name": "MergePatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID2"
+          },
+          {
+            "name": "AutoCreateReferringPhysician",
+            "valueString": "1"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MessageHeader",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/MessageHeader"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/receivingApplication",
+            "valueString": "RA"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/receivingFacility",
+            "valueString": "RF"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/messageControlId",
+            "valueString": "000000347"
+          }
+        ],
+        "eventCoding": {
+          "system": "A08",
+          "code": "ADT"
+        },
+        "source": {
+          "name": "SA",
+          "software": "SF"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Patient"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/ARIAID1",
+            "value": "PatientID_5_75"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "JONES9"
+          }
+        ],
+        "managingOrganization": {
+          "display": "ACHospital"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CareTeam",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/CareTeam"
+          ]
+        },
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "default-service-organization"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "display": "OIS_ID1"
+            }
+          },
+          {
+            "role":[
+              {
+                "coding":[
+                  {
+                    "system":"http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code":"primary-oncologist"
+                  }
+                ]
+              }
+            ],
+            "member":{
+              "reference":"#Practitioner-docOnco",
+              "identifier":{
+                "value":"docOnco"
+              }
+            }
+          },
+          {
+            "role":[
+              {
+                "coding":[
+                  {
+                    "system":"http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code":"primary-referring-physician"
+                  }
+                ]
+              }
+            ],
+            "member":{
+              "reference":"#Practitioner-docPD1",
+              "identifier":{
+                "value":"docPD1"
+              }
+            }
+          },
+          {
+            "role":[
+              {
+                "coding":[
+                  {
+                    "system":"http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code":"referring-physician"
+                  }
+                ]
+              }
+            ],
+            "member":{
+              "reference":"#Practitioner-docRp1",
+              "identifier":{
+                "value":"docRp1"
+              }
+            }
+          },
+          {
+            "role":[
+              {
+                "coding":[
+                  {
+                    "system":"http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code":"referring-physician"
+                  }
+                ]
+              },
+              {
+                "coding":[
+                  {
+                    "system":"http://loinc.org",
+                    "code":"56802-2"
+                  }
+                ]
+              }
+            ],
+            "member":{
+              "reference":"#Practitioner-docPD1",
+              "identifier":{
+                "value":"docPD1"
+              }
+            }
+          },
+          {
+            "role":[
+              {
+                "coding":[
+                  {
+                    "system":"http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code":"referring-physician"
+                  }
+                ]
+              },
+              {
+                "coding":[
+                  {
+                    "system":"http://loinc.org",
+                    "code":"56802-2"
+                  }
+                ]
+              }
+            ],
+            "member":{
+              "reference":"#Practitioner-docPD2",
+              "identifier":{
+                "value":"docPD2"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Parameters",
+        "parameter": [
+          {
+            "name": "Source",
+            "valueString": "Hl7"
+          },
+          {
+            "name": "Subject",
+            "valueString": "PatientSwapLocation"
+          },
+          {
+            "name": "Event",
+            "valueString": "ADT^A17"
+          },
+          {
+            "name": "SuppressUpdateOnPrimaryCheck",
+            "valueString": "0"
+          },
+          {
+            "name": "SnapshotAllergy",
+            "valueBoolean": false
+          },
+          {
+            "name": "PrimaryCoverage",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotCoverage",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotCondition",
+            "valueBoolean": false
+          },
+          {
+            "name": "CurrentDatetime",
+            "valueString": "2021-03-15T08:10:41"
+          },
+          {
+            "name": "DefaultHospitalName"
+          },
+          {
+            "name": "DefaultDepartmentId"
+          },
+          {
+            "name": "DefaultRoomNumber",
+            "valueString": "Unknown"
+          },
+          {
+            "name": "AutoCreateEvents",
+            "valueString": "ADT^A01,ADT^A02,ADT^A03,ADT^A04,ADT^A05,ADT^A06,ADT^A07,ADT^A08,ADT^A14,ADT^A15,ADT^A22,ADT^A28,ADT^A31"
+          },
+          {
+            "name": "AdvPatientClassProcess",
+            "valueString": "0"
+          },
+          {
+            "name": "PatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name": "MergePatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name": "AutoCreateReferringPhysician",
+            "valueString": "1"
+          },
+          {
+            "name": "DenySnapshotOnDirectiveComment"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MessageHeader",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/MessageHeader"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/receivingApplication",
+            "valueString": "7edit.com"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/receivingFacility"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/messageControlId",
+            "valueString": "MSG-20210312-113450-0603"
+          }
+        ],
+        "source": {
+          "name": "7edit.com"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-0",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Patient"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "TestMotherMaidenName"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-class",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "Out Patient"
+                }
+              ]
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#roomNumber",
+                "valueString": "1234"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#dischargeDate",
+                "valueDate": "2015-07-05"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#admissionDate",
+                "valueDate": "2020-03-16"
+              }
+            ],
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-location#venue",
+            "valueIdentifier": {
+              "system": "http://varian.com/fhir/identifier/Location/Id",
+              "value": "TEST_VENUE"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/recordedOn",
+            "valueDateTime": "2021-03-15T08:10:41"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/person-gender",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/patient-ariaGender",
+                  "code": "Female"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/ARIAID1",
+            "value": "TestPatient_120301"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Automation2021020811345442",
+            "given": [
+              "Test"
+            ]
+          }
+        ],
+        "managingOrganization": {
+          "display": "ACHospital"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CareTeam",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/CareTeam"
+          ]
+        },
+        "subject": {
+          "reference": "Patient-0"
+        },
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "default-service-organization"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "display": "TEST_ID1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-1",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Patient"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "TestMotherMaidenName"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-class",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "In Patient"
+                }
+              ]
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#roomNumber",
+                "valueString": "12352"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#admissionDate",
+                "valueDate": "2020-03-16"
+              }
+            ],
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-location#venue",
+            "valueIdentifier": {
+              "system": "http://varian.com/fhir/identifier/Location/Id",
+              "value": "TEST_VENUE2"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/recordedOn",
+            "valueDateTime": "2021-03-15T08:10:41"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/person-gender",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/patient-ariaGender",
+                  "code": "Female"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/ARIAID1",
+            "value": "pId_2021020811345442"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Automation2021020811345442",
+            "given": [
+              "Test"
+            ]
+          }
+        ],
+        "managingOrganization": {
+          "display": "ACHospital"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CareTeam",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/CareTeam"
+          ]
+        },
+        "subject": {
+          "reference": "Patient-1"
+        },
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "default-service-organization"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "display": "TEST_ID1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Account",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Account"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/Account-inpatient",
+            "valueBoolean": true
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Account/Id",
+            "value": "11122"
+          }
+        ],
+        "status": "active",
+        "name": "ALbl2",
+        "subject": [
+          {
+            "reference": "Patient-1",
+            "type": "Patient"
+          }
+        ],
+        "servicePeriod": {
+          "start": "2015-07-06",
+          "end": "2015-07-07"
+        },
+        "owner": {
+          "display": "OIS_ID12"
+        }
+      }
+    }
+  ]
+}

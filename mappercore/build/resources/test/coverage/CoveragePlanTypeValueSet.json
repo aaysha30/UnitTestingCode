@@ -1,0 +1,64 @@
+{
+  "resourceType": "ValueSet",
+  "id": "aria-coverage-plantype",
+  "meta": {
+    "profile": [
+      "http://varian.com/fhir/v1/StructureDefinition/ValueSet"
+    ]
+  },
+  "url": "http://hl7.org/fhir/ValueSet/coverage-type",
+  "version": "1.0",
+  "name": "aria-coverage-plantype",
+  "status": "active",
+  "description": "This value set includes coverage Type codes.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://varian.com/fhir/CodeSystem/aria-coverage-policyPlanType"
+      }
+    ]
+  },
+  "expansion": {
+    "contains": [
+      {
+        "contains": [
+          {
+            "system": "http://varian.com/fhir/CodeSystem/aria-coverage-policyPlanType",
+            "code": "CAP",
+            "display": "Capitated Contract"
+          },
+          {
+            "system": "http://varian.com/fhir/CodeSystem/aria-coverage-policyPlanType",
+            "code": "HMO",
+            "display": "Health Maintenance Organization"
+          },
+          {
+            "system": "http://varian.com/fhir/CodeSystem/aria-coverage-policyPlanType",
+            "code": "PPO",
+            "display": "Preferred Provider Organization"
+          },
+          {
+            "system": "http://varian.com/fhir/CodeSystem/aria-coverage-policyPlanType",
+            "code": "FFS",
+            "display": "Fee For Service"
+          },
+          {
+            "system": "http://varian.com/fhir/CodeSystem/aria-coverage-policyPlanType",
+            "code": "MED",
+            "display": "Medicare"
+          },
+          {
+            "system": "http://varian.com/fhir/CodeSystem/aria-coverage-policyPlanType",
+            "code": "MEC",
+            "display": "Medicaid"
+          },
+          {
+            "system": "http://varian.com/fhir/CodeSystem/aria-coverage-policyPlanType",
+            "code": "SFP",
+            "display": "Self Pay"
+          }
+        ]
+      }
+    ]
+  }
+}

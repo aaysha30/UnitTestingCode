@@ -1,0 +1,32 @@
+ariaFhirServerUrl: https://VCRomoV18:44370/4.2/fhir
+interfaceApiClientUrl: https://localhost:49002
+masterSqliteDbName: Master_VC.sqlite
+connectTimeoutInMilliseconds: 150000
+socketTimeoutInMilliseconds: 150000
+interfaceServiceConnectionTimeout: 30000
+interfaceServiceReadTimeout: 30000
+interfaceServiceWriteTimeout: 30000
+defaultHL7Version: 2.5.1
+#value of EnableSMARTFormatting should be true/false only
+enableSMARTFormatting: false
+clientCredentials:
+  clientName: ARIA_CONNECT_VAIS_CLIENT
+  clientId: b9d76cd8-436f-48d2-894f-d6413fb2c35f
+  clientSecret: "AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0sWjn7gJgEGBpGpq+Kjg1AAAAAACAAAAAAADZgAAwAAAABAAAAAKOGHbM75kPZMsDRgeJ4qAAAAAAASAAACgAAAAEAAAAOtEvg5kJXxFJh0jzHuswOQIAAAA3WQHKf11pwMUAAAAoH7ognSm9JAZ1lZP0lpw+gCgFt4="
+  authority: https://VCRomoV18:44333/tokenservice/connect/token
+  scopes: Varian/ARIA/FHIR/Account/Read Varian/ARIA/FHIR/Account/Write Varian/ARIA/FHIR/ActivityDefinition/Read Varian/ARIA/FHIR/AdverseEvent/Read Varian/ARIA/FHIR/AllergyIntolerance/Read Varian/ARIA/FHIR/AllergyIntolerance/Write Varian/ARIA/FHIR/Appointment/Read Varian/ARIA/FHIR/Appointment/Write Varian/ARIA/FHIR/Basic/Read Varian/ARIA/FHIR/CarePath/Read Varian/ARIA/FHIR/CarePlan/Read Varian/ARIA/FHIR/CarePlan/Write Varian/ARIA/FHIR/CareTeam/Read Varian/ARIA/FHIR/CareTeam/Write Varian/ARIA/FHIR/ChargeItem/Read Varian/ARIA/FHIR/ChargeItem/Write Varian/ARIA/FHIR/ChemotherapyRegimen/Read Varian/ARIA/FHIR/ClinicalImpression/Read Varian/ARIA/FHIR/ClinicalImpression/Write Varian/ARIA/FHIR/Communication/Read Varian/ARIA/FHIR/Communication/Write Varian/ARIA/FHIR/Condition/Read Varian/ARIA/FHIR/Condition/Write Varian/ARIA/FHIR/Coverage/Read Varian/ARIA/FHIR/Coverage/Write Varian/ARIA/FHIR/CoverageEligibilityResponse/Read Varian/ARIA/FHIR/CoverageEligibilityResponse/Write Varian/ARIA/FHIR/Device/Read Varian/ARIA/FHIR/DiagnosticReport/Read Varian/ARIA/FHIR/DiagnosticReport/Write Varian/ARIA/FHIR/DocumentReference/Read Varian/ARIA/FHIR/DocumentReference/Write Varian/ARIA/FHIR/FamilyMemberHistory/Read Varian/ARIA/FHIR/FieldImage/Read Varian/ARIA/FHIR/Flag/Read Varian/ARIA/FHIR/Flag/Write Varian/ARIA/FHIR/Group/Read Varian/ARIA/FHIR/HealthcareService/Read Varian/ARIA/FHIR/Immunization/Read Varian/ARIA/FHIR/InsurancePlan/Read Varian/ARIA/FHIR/InsurancePlan/Write Varian/ARIA/FHIR/Location/Read Varian/ARIA/FHIR/MedicationRequest/Read Varian/ARIA/FHIR/MedicationStatement/Read Varian/ARIA/FHIR/MedicationStatement/Write Varian/ARIA/FHIR/Observation/Read Varian/ARIA/FHIR/Observation/Write Varian/ARIA/FHIR/Organization/Read Varian/ARIA/FHIR/Patient/Read Varian/ARIA/FHIR/Patient/Write Varian/ARIA/FHIR/Practitioner/Read Varian/ARIA/FHIR/Practitioner/Write Varian/ARIA/FHIR/Procedure/Read Varian/ARIA/FHIR/ProcedureRequest/Read Varian/ARIA/FHIR/ProcedureRequest/Write Varian/ARIA/FHIR/RTPrescription/Read Varian/ARIA/FHIR/ServiceRequest/Read Varian/ARIA/FHIR/ServiceRequest/Write Varian/ARIA/FHIR/Slot/Read Varian/ARIA/FHIR/Task/Read Varian/ARIA/FHIR/Task/Write Varian/ARIA/FHIR/TreatmentRecord/Read Varian/ARIA/FHIR/TreatmentSummary/Read Varian/ARIA/FHIR/ValueSet/Read Varian/AriaEvents/Subscription/Read Varian/AriaEvents/Subscription/Write Varian/SharedFramework/Infrastructure/Security/Read Varian/SharedFramework/Infrastructure/Settings/Read
+hl7EncodeCharacters:
+  fieldSeparator: \F\
+  escapeSequence: \E\
+  repetitionSeparator: \R\
+  componentSeparator: \S\
+  subcomponentSeparator: \T\
+dslRoot:
+  ADT_IN: ["dsl/master/inbound/interfaces/adtin","dsl/master/inbound/common"]
+  PARK_PATIENT : ["dsl/master/inbound/common", "dsl/master/inbound/interfaces/parkpatient"]
+  SIU_Out: ["dsl/master/outbound/interfaces/siuout","dsl/master/outbound/common","dsl/master/outbound/helper"]
+ariaEventsClientUrl: https://vcromov18:55070
+necessaryScopesForARIAEvents: Varian/AriaEvents/Notification Varian/AriaConnect/BulkLoad
+jwksUrl: https://VCRomoV18:44333/TokenService/.well-known/openid-configuration/jwks
+jwksTimeoutInMilliseconds: 5000
+jwtissuer: https://VCRomoV18.ariav16.lab.local:44333/tokenservice

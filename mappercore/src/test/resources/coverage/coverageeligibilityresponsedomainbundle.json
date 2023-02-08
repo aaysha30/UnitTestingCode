@@ -1,0 +1,272 @@
+{
+  "resourceType": "Bundle",
+  "id": "72cbca72-2f97-40b4-b278-3addbb0b3301",
+  "meta": {
+    "lastUpdated": "2021-05-21T12:10:24.807+05:30"
+  },
+  "type": "searchset",
+  "total": 3,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://10.167.182.196:44370/4.1/fhir/CoverageEligibilityResponse?coverage=Coverage-44"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://10.167.182.196:44370/4.1/fhir/CoverageEligibilityResponse/CoverageEligibilityResponse-4",
+      "resource": {
+        "resourceType": "CoverageEligibilityResponse",
+        "id": "CoverageEligibilityResponse-4",
+        "meta": {
+          "versionId": "413619",
+          "lastUpdated": "2021-05-21T09:46:54.760+05:30",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/CoverageEligibilityResponse"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/asserter",
+            "valueReference": {
+              "identifier": {
+                "value": "PA"
+              }
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/CoverageEligibilityResponse-authorTelecom",
+            "valueContactPoint": {
+              "system": "phone",
+              "value": "02012345",
+              "use": "work"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/CoverageEligibilityResponse-authorTelecom",
+            "valueContactPoint": {
+              "system": "fax",
+              "value": "02012000",
+              "use": "work"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/CoverageEligibilityResponse/RadOnc-Id",
+            "value": "4"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/CoverageEligibilityResponse/AuthorizationId",
+            "value": "PAAUTHID"
+          }
+        ],
+        "status": "active",
+        "purpose": [
+          "auth-requirements"
+        ],
+        "patient": {
+          "reference": "Patient/Patient-366",
+          "display": "Test_230221_01"
+        },
+        "servicedDate": "2021-05-21",
+        "created": "2021-05-21T09:46:54+05:30",
+        "request": {
+          "identifier": {
+            "system": "http://varian.com/fhir/identifier/InsurancePlan/Id",
+            "value": "1"
+          }
+        },
+        "outcome": "complete",
+        "disposition": "PADesc",
+        "insurer": {
+          "identifier": {
+            "system": "http://varian.com/fhir/identifier/InsurancePlan/Payor",
+            "value": "Test Group Plan"
+          }
+        },
+        "insurance": [
+          {
+            "coverage": {
+              "reference": "Coverage/Coverage-44"
+            }
+          }
+        ],
+        "preAuthRef": "PAAUTHID"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://10.167.182.196:44370/4.1/fhir/CoverageEligibilityResponse/CoverageEligibilityResponse-6",
+      "resource": {
+        "resourceType": "CoverageEligibilityResponse",
+        "id": "CoverageEligibilityResponse-6",
+        "meta": {
+          "versionId": "413697",
+          "lastUpdated": "2021-05-21T10:13:29.333+05:30",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/CoverageEligibilityResponse"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/asserter",
+            "valueReference": {
+              "identifier": {
+                "value": "PA3"
+              }
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/CoverageEligibilityResponse-authorTelecom",
+            "valueContactPoint": {
+              "system": "phone",
+              "value": "0201233333",
+              "use": "work"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/CoverageEligibilityResponse-authorTelecom",
+            "valueContactPoint": {
+              "system": "fax",
+              "value": "02033000",
+              "use": "work"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/CoverageEligibilityResponse/RadOnc-Id",
+            "value": "6"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/CoverageEligibilityResponse/AuthorizationId",
+            "value": "PAAUTHID"
+          }
+        ],
+        "status": "active",
+        "purpose": [
+          "auth-requirements"
+        ],
+        "patient": {
+          "reference": "Patient/Patient-366",
+          "display": "Test_230221_01"
+        },
+        "servicedDate": "2021-05-21",
+        "created": "2021-05-21T10:13:29+05:30",
+        "request": {
+          "identifier": {
+            "system": "http://varian.com/fhir/identifier/InsurancePlan/Id",
+            "value": "1"
+          }
+        },
+        "outcome": "complete",
+        "disposition": "PADesc333",
+        "insurer": {
+          "identifier": {
+            "system": "http://varian.com/fhir/identifier/InsurancePlan/Payor",
+            "value": "Test Group Plan"
+          }
+        },
+        "insurance": [
+          {
+            "coverage": {
+              "reference": "Coverage/Coverage-44"
+            }
+          }
+        ],
+        "preAuthRef": "PAAUTHID"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://10.167.182.196:44370/4.1/fhir/CoverageEligibilityResponse/CoverageEligibilityResponse-5",
+      "resource": {
+        "resourceType": "CoverageEligibilityResponse",
+        "id": "CoverageEligibilityResponse-5",
+        "meta": {
+          "versionId": "413665",
+          "lastUpdated": "2021-05-21T10:02:59.160+05:30",
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/CoverageEligibilityResponse"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/asserter",
+            "valueReference": {
+              "identifier": {
+                "value": "PA2"
+              }
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/CoverageEligibilityResponse-authorTelecom",
+            "valueContactPoint": {
+              "system": "phone",
+              "value": "02012222",
+              "use": "work"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/CoverageEligibilityResponse-authorTelecom",
+            "valueContactPoint": {
+              "system": "fax",
+              "value": "020222000",
+              "use": "work"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/CoverageEligibilityResponse/RadOnc-Id",
+            "value": "5"
+          },
+          {
+            "system": "http://varian.com/fhir/identifier/CoverageEligibilityResponse/AuthorizationId",
+            "value": "PAAUTHID2"
+          }
+        ],
+        "status": "active",
+        "purpose": [
+          "auth-requirements"
+        ],
+        "patient": {
+          "reference": "Patient/Patient-366",
+          "display": "Test_230221_01"
+        },
+        "servicedDate": "2021-05-19",
+        "created": "2021-05-21T10:02:59+05:30",
+        "request": {
+          "identifier": {
+            "system": "http://varian.com/fhir/identifier/InsurancePlan/Id",
+            "value": "1"
+          }
+        },
+        "outcome": "complete",
+        "disposition": "PADESC2",
+        "insurer": {
+          "identifier": {
+            "system": "http://varian.com/fhir/identifier/InsurancePlan/Payor",
+            "value": "Test Group Plan"
+          }
+        },
+        "insurance": [
+          {
+            "coverage": {
+              "reference": "Coverage/Coverage-44"
+            }
+          }
+        ],
+        "preAuthRef": "PAAUTHID2"
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}

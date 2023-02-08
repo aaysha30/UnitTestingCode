@@ -1,0 +1,48 @@
+{
+  "resourceType": "Bundle",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "ValueSet",
+        "id": "aria-patient-transportation-contact",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/ValueSet"
+          ]
+        },
+        "url": "http://varian.com/fhir/ValueSet/patient-transportation-contact",
+        "version": "1.0",
+        "name": "aria-patient-transportation-contact",
+        "status": "active",
+        "publisher": "Organization-Prov-1",
+        "description": "This value set includes Patient Transportation contact details.",
+        "compose": {
+          "include": [
+            {
+              "system": "http://varian.com/fhir/CodeSystem/patient-transportationcontact"
+            }
+          ]
+        },
+        "expansion": {
+          "contains": [
+            {
+              "contains": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/patient-transportationcontact",
+                  "code": "Cab",
+                  "display": "5556664545"
+                },
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/patient-transportationcontact",
+                  "code": "TransportDriver",
+                  "display": "9090909090"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

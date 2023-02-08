@@ -1,0 +1,360 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Parameters",
+        "parameter": [
+          {
+            "name": "Source",
+            "valueString": "Hl7"
+          },
+          {
+            "name": "Subject",
+            "valueString": "PatientSave"
+          },
+          {
+            "name": "Event",
+            "valueString": "ADT^A04"
+          },
+          {
+            "name": "SuppressUpdateOnPrimaryCheck",
+            "valueString": "0"
+          },
+          {
+            "name": "SnapshotAllergy",
+            "valueBoolean": false
+          },
+          {
+            "name": "PrimaryCoverage",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotCoverage",
+            "valueBoolean": false
+          },
+          {
+            "name": "SnapshotCondition",
+            "valueBoolean": false
+          },
+          {
+            "name": "CurrentDatetime",
+            "valueString": "2021-03-02T16:00:05"
+          },
+          {
+            "name": "DefaultHospitalName"
+          },
+          {
+            "name": "DefaultDepartmentId"
+          },
+          {
+            "name": "DefaultRoomNumber",
+            "valueString": "Unknown"
+          },
+          {
+            "name": "AutoCreateEvents",
+            "valueString": "ADT^A01,ADT^A02,ADT^A03,ADT^A04,ADT^A05,ADT^A06,ADT^A07,ADT^A08,ADT^A14,ADT^A15,ADT^A22,ADT^A28,ADT^A31"
+          },
+          {
+            "name": "AdvPatientClassProcess",
+            "valueString": "0"
+          },
+          {
+            "name": "PatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name": "MergePatientSearchKeys",
+            "valueString": "http://varian.com/fhir/identifier/Patient/ARIAID1"
+          },
+          {
+            "name": "AutoCreateReferringPhysician",
+            "valueString": "1"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MessageHeader",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/MessageHeader"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/receivingApplication",
+            "valueString": "RA"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/receivingFacility",
+            "valueString": "RF"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/messageControlId",
+            "valueString": "000000347"
+          }
+        ],
+        "source": {
+          "name": "SA",
+          "software": "SF"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Patient"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "TestMaidenName"
+          },
+          {
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "American Indian or Alaska Native"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": true
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/isPrimary",
+                "valueBoolean": true
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          },
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://varian.com/fhir/CodeSystem/patient-citizenship",
+                      "code": "India"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Pune",
+              "country": "Pakistan"
+            }
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-class",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "Out Patient"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-religion",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/CodeSystem/patient-religion",
+                  "code": "Protestant"
+                }
+              ]
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#roomNumber",
+                "valueString": "112"
+              },
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails#dischargeDate",
+                "valueDate": "2021-02-25T01:01:01"
+              }
+            ],
+            "url": "http://varian.com/fhir/v1/StructureDefinition/patient-locationDetails"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/recordedOn",
+            "valueDateTime": "2021-03-02T16:00:05"
+          },
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/person-gender",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://varian.com/fhir/patient-ariaGender",
+                  "code": "Male"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Patient/ARIAID1",
+            "value": "PatientId1_16"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Family",
+            "given": [
+              "Automation",
+              "Middle"
+            ],
+            "suffix": [
+              "Sfx"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(0253)2380380",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "testHome@email.com",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "(020)999999999",
+            "use": "work"
+          }
+        ],
+        "birthDate": "2000-10-20T11:22:33",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://varian.com/fhir/v1/StructureDefinition/address-primary",
+                "valueBoolean": true
+              }
+            ],
+            "use": "home",
+            "type": "both",
+            "line": [
+              "121MagarpattaN Main Street",
+              "Hadapsar"
+            ],
+            "city": "GREENSBORO",
+            "district": "LKA",
+            "state": "NC",
+            "postalCode": "27401-1020",
+            "country": "India"
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "http://varian.com/ocs/fhir/patient/communication-language",
+                  "code": "Polish"
+                }
+              ]
+            }
+          }
+        ],
+        "managingOrganization": {
+          "display": "ACHospital"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CareTeam",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/CareTeam"
+          ]
+        },
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://varian.com/fhir/CodeSystem/careteam-participant-role",
+                    "code": "default-service-organization"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "display": "TEST_ID1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Account",
+        "meta": {
+          "profile": [
+            "http://varian.com/fhir/v1/StructureDefinition/Account"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://varian.com/fhir/v1/StructureDefinition/Account-inpatient",
+            "valueBoolean": true
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://varian.com/fhir/identifier/Account/Id",
+            "value": "1112"
+          }
+        ],
+        "status": "active",
+        "name": "ALbl",
+        "subject": [
+          {
+            "type": "Practitioner",
+            "identifier": {
+              "system": "http://varian.com/fhir/identifier/Practitioner/Id",
+              "value": "doc1"
+            }
+          }
+        ],
+        "servicePeriod": {
+          "start": "2015-07-06",
+          "end": "2015-07-07"
+        },
+        "owner": {
+          "display": "OIS_ID1"
+        }
+      }
+    }
+  ]
+}

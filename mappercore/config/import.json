@@ -1,0 +1,21 @@
+{
+  "import_packages": [
+    "org.hl7.fhir.r4.model",
+    "master.inbound.common",
+    "master.inbound.interfaces.adtin.common",
+    "master.outbound.interfaces.siuout",
+    "master.inbound.interfaces.adtin.common.coverage",
+    "master.inbound.interfaces.adtin.common.account",
+    "master.inbound.interfaces.adtin.common.condition",
+    "master.inbound.interfaces.adtin.common.careteam",
+    "ca.uhn.fhir.rest.gclient",
+    "ca.uhn.fhir.rest.param",
+    "ca.uhn.fhir.rest.api",
+    "ca.uhn.hl7v2.model.v251.message",
+    "ca.uhn.hl7v2.model.v251.segment"
+  ],
+  "import_static_packages": [
+    "master.inbound.common.ResourceUtil",
+    "master.inbound.common.DateUtil"
+  ]
+}

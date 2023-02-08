@@ -1,0 +1,55 @@
+{
+  "resourceType": "Bundle",
+  "id": "97577822-4e1f-42f2-a5f4-6df24b43f149",
+  "meta": {
+    "lastUpdated": "2021-02-05T15:06:15.358+05:30"
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://ariav16dc:44370/fhir/Patient?_revinclude=CareTeam%3Apatient&identifier=TestPatient_210102_up3"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://ariav16dc:44370/fhir/Account/Account-1",
+      "resource": {
+        "resourceType":"Account",
+        "meta":{
+          "profile":[
+            "http://varian.com/fhir/v1/StructureDefinition/Account"
+          ]
+        },
+        "extension":[
+          {
+            "url":"http://varian.com/fhir/v1/StructureDefinition/Account-inpatient",
+            "valueBoolean":true
+          }
+        ],
+        "identifier":[
+          {
+            "system":"http://varian.com/fhir/identifier/Account/Id",
+            "value":"1112"
+          }
+        ],
+        "status":"active",
+        "name":"ALbl",
+        "subject":[
+          {
+            "reference":"Patient-patientId",
+            "type":"Patient"
+          }
+        ],
+        "servicePeriod":{
+          "start":"2015-07-06",
+          "end":"2015-07-07"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}
