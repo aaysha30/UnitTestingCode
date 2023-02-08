@@ -34,56 +34,62 @@ import org.mockito.Mockito
 import java.sql.Connection
 
 class SiuOutTest {
-   companion object{
-       protected lateinit var cloverLogger: CloverLogger
-       lateinit var fhirFactory: FhirFactory
-       lateinit var scripts: IScripts
-       lateinit var scriptInformation: ScriptInformation
-       lateinit var parser: IParser
-       protected var log: Logger = LogManager.getLogger(UpocBaseOutbound::class.java)
-       var bundleString=""
-       lateinit var bundleType: Bundle
-       @BeforeClass
-       @JvmStatic
-       fun set(){
-           FileOperation.setCurrentBasePath("")
-           bundleString=TestHelper.readResource("/appointment/appointmentBundle.json")
-           fhirFactory = FhirFactory()
-           parser = fhirFactory.getFhirParser()
-           bundleType =parser.parseResource(Bundle::class.java,
-              bundleString
-           )
-           scripts = TestHelper.scripts
-           scriptInformation = scripts.getHandlerFor("Json", "SiuOut")!!.get()
+    companion object {
+        protected lateinit var cloverLogger: CloverLogger
+        lateinit var fhirFactory: FhirFactory
+        lateinit var scripts: IScripts
+        lateinit var scriptInformation: ScriptInformation
+        lateinit var parser: IParser
+        protected var log: Logger = LogManager.getLogger(UpocBaseOutbound::class.java)
+        var bundleString = ""
+        lateinit var bundleType: Bundle
 
-       }
-   }
+        @BeforeClass
+        @JvmStatic
+        fun set() {
+            FileOperation.setCurrentBasePath("")
+            bundleString = TestHelper.readResource("/appointment/appointmentBundle.json")
+            fhirFactory = FhirFactory()
+            parser = fhirFactory.getFhirParser()
+            bundleType = parser.parseResource(
+                Bundle::class.java,
+                bundleString
+            )
+            scripts = TestHelper.scripts
+            scriptInformation = scripts.getHandlerFor("Json", "SiuOut")!!.get()
+
+        }
+    }
+
     lateinit var fhirClient: FhirClient
     lateinit var outcome: Outcome
     lateinit var clientDecor: ClientDecor
     lateinit var parameters: MutableMap<String, Any>
     protected var siteDirName: String = ""
-    protected var mappedSqliteDbName:String=""
+    protected var mappedSqliteDbName: String = ""
     private var objectMapper: ObjectMapper
+
     init {
         objectMapper = ObjectMapper()
     }
+
     val mapper = objectMapper
     val bundleJson: ObjectNode = mapper.createObjectNode()
     lateinit var siuS12: SIU_S12
-    val globalInit:GlobalInit = mock()
+    val globalInit: GlobalInit = mock()
+
     @Before
     fun setup() {
         bundleJson.put("resourceType", "Bundle")
         siuS12 = SIU_S12()
         siuS12.initQuickstart("SIU", "S12", "P")
-        var bundleToString= parser.encodeResourceToString(bundleType)
+        var bundleToString = parser.encodeResourceToString(bundleType)
         parameters = mutableMapOf()
         fhirClient = mock()
         outcome = Outcome(parser)
         clientDecor = ClientDecor(fhirClient, outcome)
         parameters[ParameterConstant.SEVERITY] = OperationOutcome.IssueSeverity.INFORMATION
-        parameters[ParameterConstant.BUNDLE] = parser.parseResource(bundleToString ) as Bundle
+        parameters[ParameterConstant.BUNDLE] = parser.parseResource(bundleToString) as Bundle
         parameters[ParameterConstant.CLIENT_DECOR] = clientDecor
         parameters[ParameterConstant.BUNDLE_UTILITY] = fhirFactory.getBundleUtility()
         parameters[ParameterConstant.PARAMETERS_UTILITY] = fhirFactory.getParametersUtility()
@@ -95,44 +101,126 @@ class SiuOutTest {
         parameters[ParameterConstant.CLOVERLOGGER] = CloverLogger.initCLoverLogger(mock())
         parameters[ParameterConstant.MSGMETADATA] = MessageMetaData()
         parameters[ParameterConstant.parser] = parser
-        parameters[ParameterConstant.MAPPED_SQLITE_DB_NAME]=mappedSqliteDbName
-        parameters[ParameterConstant.SIUOUT]=siuS12
-        parameters[ ParameterConstant.GLOBAL_INIT]= globalInit
+        parameters[ParameterConstant.MAPPED_SQLITE_DB_NAME] = mappedSqliteDbName
+        parameters[ParameterConstant.SIUOUT] = siuS12
+        parameters[ParameterConstant.GLOBAL_INIT] = globalInit
     }
+
     @Test
-    fun test(){
-        val mockConnection =Mockito.mock(Connection::class.java)
-        var alist= arrayListOf<String>()
+    fun siu_OutBound_HL7_Test() {
+        val mockConnection = Mockito.mock(Connection::class.java)
+        var alist = arrayListOf<String>()
         mockkObject(SqliteUtility.Companion)
-        every { SqliteUtility.Companion.getSqliteConnectionObject(any(),any()) }answers {mockConnection}
-        every{SqliteUtility.Companion.getValue(any(),any(),any(),any(),any())}answers {"getValue"}
-        every{SqliteUtility.Companion.getValues(any(),any(),any(),any())}answers { alist}
-        val outcome = scripts.run(parameters,scriptInformation)
+        every { SqliteUtility.Companion.getSqliteConnectionObject(any(), any()) } answers { mockConnection }
+        every { SqliteUtility.Companion.getValue(any(), any(), any(), any(), any()) } answers { "getValue" }
+        every { SqliteUtility.Companion.getValues(any(), any(), any(), any()) } answers { alist }
+        val outcome = scripts.run(parameters, scriptInformation)
         Assert.assertNotNull(outcome)
-//        var siuS12=outcome as SIU_S12
-        var siuS12=outcome as SIU_S12
-      //  Assert.assertEquals(,siuS12.msh);
+        var siuS12 = outcome as SIU_S12
         println(siuS12.sch.placerAppointmentID.entityIdentifier.value)
-        assertEquals("2023-01-09T00-04-46-901-1847692@958500816058",siuS12.sch.placerAppointmentID.entityIdentifier.value)
-        assertEquals("1847692",siuS12.sch.placerAppointmentID.universalID.value )
-        assertEquals("2023-01-09T00-04-46-901-1847692@958500816058",siuS12.sch.fillerAppointmentID.entityIdentifier.value)
-        assertEquals("1847692",siuS12.sch.fillerAppointmentID.universalID.value)
-        assertEquals("getValue",siuS12.sch.eventReason.identifier.value)
-        assertEquals("Appointment status changed.",siuS12.sch.eventReason.text.value)
-        assertEquals("Blood Test",siuS12.sch.appointmentReason.text.value)
+        assertEquals(
+            "2023-01-09T00-04-46-901-1847692@958500816058",
+            siuS12.sch.placerAppointmentID.entityIdentifier.value
+        )
+        assertEquals("1847692", siuS12.sch.placerAppointmentID.universalID.value)
+        assertEquals(
+            "2023-01-09T00-04-46-901-1847692@958500816058",
+            siuS12.sch.fillerAppointmentID.entityIdentifier.value
+        )
+        assertEquals("1847692", siuS12.sch.fillerAppointmentID.universalID.value)
+        assertEquals("getValue", siuS12.sch.eventReason.identifier.value)
+        assertEquals("Appointment status changed.", siuS12.sch.eventReason.text.value)
+        assertEquals("Blood Test", siuS12.sch.appointmentReason.text.value)
         assertNull(siuS12.sch.appointmentType.text.value)
-        assertEquals("15",siuS12.sch.appointmentDuration.value)
-        assertEquals("M",siuS12.sch.appointmentDurationUnits.identifier.value)
-        assertEquals("20230109133300",siuS12.sch.appointmentTimingQuantity.get(0).startDateTime.time.value)
-        assertEquals("20230109134800",siuS12.sch.appointmentTimingQuantity.get(0).endDateTime.time.value)
-        assertEquals("ACUser",siuS12.sch.fillerContactPerson.get(0).idNumber.value)
-        assertEquals("User",siuS12.sch.fillerContactPerson.get(0).familyName.surname.value)
-        assertEquals("AC",siuS12.sch.fillerContactPerson.get(0).givenName.value)
-        assertEquals("ACUser",siuS12.sch.enteredByPerson.get(0).idNumber.value)
-        assertEquals("User",siuS12.sch.enteredByPerson.get(0).familyName.surname.value)
-        assertEquals("AC",siuS12.sch.enteredByPerson.get(0).givenName.value)
-        assertEquals("getValue",siuS12.sch.fillerStatusCode.identifier.value)
-        assertEquals("Open",siuS12.sch.fillerStatusCode.text.value)
-        assertEquals("Active",siuS12.sch.fillerStatusCode.alternateText.value)
+        assertEquals("15", siuS12.sch.appointmentDuration.value)
+        assertEquals("M", siuS12.sch.appointmentDurationUnits.identifier.value)
+        assertEquals("20230109133300", siuS12.sch.appointmentTimingQuantity.get(0).startDateTime.time.value)
+        assertEquals("20230109134800", siuS12.sch.appointmentTimingQuantity.get(0).endDateTime.time.value)
+        assertEquals("ACUser", siuS12.sch.fillerContactPerson.get(0).idNumber.value)
+        assertEquals("User", siuS12.sch.fillerContactPerson.get(0).familyName.surname.value)
+        assertEquals("AC", siuS12.sch.fillerContactPerson.get(0).givenName.value)
+        assertEquals("ACUser", siuS12.sch.enteredByPerson.get(0).idNumber.value)
+        assertEquals("User", siuS12.sch.enteredByPerson.get(0).familyName.surname.value)
+        assertEquals("AC", siuS12.sch.enteredByPerson.get(0).givenName.value)
+        assertEquals("getValue", siuS12.sch.fillerStatusCode.identifier.value)
+        assertEquals("Open", siuS12.sch.fillerStatusCode.text.value)
+        assertEquals("Active", siuS12.sch.fillerStatusCode.alternateText.value)
+
+
+        var count = 0
+        for (count in 0..5) {
+            var a = siuS12.getRESOURCES().getLOCATION_RESOURCE(count).ail
+            println(a)
+        }
+
+        assertAil(
+            0,
+            "1",
+            "A",
+            "SMH NucletronHDR",
+            "SMH NucletronHDR",
+            "Treatment",
+            "Auxiliary",
+            "20230109133300",
+            "15",
+            "M"
+        )
+        assertAil(
+            1,
+            "2",
+            "A",
+            "Head and Neck Holder",
+            "Head and Neck Holder",
+            "Treatment",
+            "Auxiliary",
+            "20230109133300",
+            "15",
+            "M"
+        )
+        assertAil(
+            2,
+            "3",
+            "A",
+            "EOGYL",
+            "Varian_CT-Option_Imager",
+            "ImagingDevice",
+            "Machine",
+            "20230109133300",
+            "15",
+            "M"
+        )
+        assertAil(3, "4", "A", "17mpkifu", "23EX", "RadiationDevice", "Machine", "20230109133300", "15", "M")
+        assertAil(4, "5", "A", "Venue22", "Venue22", "Treatment", "Venue", "20230109133300", "15", "M")
+        assertAil(5, "6", "A", "Venue1", "Venue1", "Conference Room", "Venue", "20230109133300", "15", "M")
+
+        Assert.assertEquals(6, siuS12.resources.locatioN_RESOURCEAll.size)
+    }
+
+    private fun assertAil(
+        count: Int,
+        idAIL: String,
+        segActCode: String,
+        poc: String,
+        compLoc: String,
+        locType: String,
+        altLocType: String,
+        startTime: String,
+        duration: String,
+        durationUnit: String
+    ) {
+        var data = siuS12.getRESOURCES().getLOCATION_RESOURCE(count).ail
+        Assert.assertEquals(idAIL, data.setIDAIL.toString())
+        Assert.assertEquals(segActCode, data.segmentActionCode.value)
+        Assert.assertEquals(poc, (data.getAil3_LocationResourceID(0).pl1_PointOfCare).toString())
+        Assert.assertEquals(
+            compLoc,
+            (data.getAil3_LocationResourceID(0).comprehensiveLocationIdentifier.entityIdentifier).toString()
+        )
+        Assert.assertEquals(locType, data.ail4_LocationTypeAIL.text.value)
+        Assert.assertEquals(altLocType, data.ail4_LocationTypeAIL.alternateText.value)
+        Assert.assertEquals(startTime, data.startDateTime.time.value)
+        Assert.assertEquals(duration, data.ail9_Duration.value)
+        Assert.assertEquals(durationUnit, data.ail10_DurationUnits.identifier.value)
+
     }
 }
